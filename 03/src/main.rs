@@ -1,7 +1,7 @@
 use std::fs;
 use std::num::ParseIntError;
 use regex::Regex;
-use std::io;
+
 
 fn main() -> Result<(),ParseIntError>{
 
@@ -22,7 +22,7 @@ fn main() -> Result<(),ParseIntError>{
     for result in results.iter()
     {
         let (r0,r1)=result;
-        total_mul+=r0*r1;;
+        total_mul+=r0*r1;
         println!("Multiplying found {r0}x{r1}");
     }
 
