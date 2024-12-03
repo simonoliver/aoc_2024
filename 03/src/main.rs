@@ -56,17 +56,5 @@ fn main() -> Result<(),ParseIntError>{
 
     println!("Pt2 total {total_mul}");
 
-    /*
-    for (_,[instruction,mul0,mul1]) in re2.captures_iter (&contents).map(|c| c.extract()) {
-        // let capture_count=capture.iter().count();
-        // println!("Capture count {capture_count}");
-        // let c0= capture.get(0).unwrap();
-        // println!("Capture '{c0}'");
-        println!("Instruction '{instruction}'");
-    }
-     */
-
-
-
     Ok(())
 }
