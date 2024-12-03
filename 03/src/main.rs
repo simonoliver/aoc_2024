@@ -29,5 +29,44 @@ fn main() -> Result<(),ParseIntError>{
     let matches_found=results.iter().count();
     println!("Matches found {matches_found} total {total_mul}");
 
+    // Part 2 - Also check for do/don't
+
+    let re2 = Regex::new(r"(mul)\(([0-9]+),([0-9]+)\)|(do)\(\)|(don't)\(\)").unwrap();
+
+    let mut add_enabled=true;
+    total_mul=0;
+    for capture in re2.captures_iter(&contents)
+    {
+        // Order will be (match,mul,arg0,arg1,do,dont)
+        let mul=capture.get(1).map_or("", |m| m.as_str());
+        let arg0=capture.get(2).map_or("", |m| m.as_str());
+        let arg1=capture.get(3).map_or("", |m| m.as_str());
+        let inst_do=capture.get(4).map_or("", |m| m.as_str());
+        let inst_dont=capture.get(5).map_or("", |m| m.as_str());
+
+        if mul.len()>0 && add_enabled
+        {
+            let arg0int=arg0.parse::<i32>().unwrap();
+            let arg1int=arg1.parse::<i32>().unwrap();
+            total_mul+=arg0int*arg1int;
+        }
+        else if inst_do.len()>0 {add_enabled=true;}
+        else if inst_dont.len()>0 {add_enabled=false;}
+    }
+
+    println!("Pt2 total {total_mul}");
+
+    /*
+    for (_,[instruction,mul0,mul1]) in re2.captures_iter (&contents).map(|c| c.extract()) {
+        // let capture_count=capture.iter().count();
+        // println!("Capture count {capture_count}");
+        // let c0= capture.get(0).unwrap();
+        // println!("Capture '{c0}'");
+        println!("Instruction '{instruction}'");
+    }
+     */
+
+
+
     Ok(())
 }
