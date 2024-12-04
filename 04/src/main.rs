@@ -1,31 +1,22 @@
 use std::fs;
-use std::num::ParseIntError;
-use std::ops::Add;
+use std::ops::{Add, Sub};
 use math2d;
-use math2d::{vector2i, Vector2i};
+use math2d::{Vector2i};
 
 // Check in a given direction and a given position for a given pattern
 fn check_pattern(pattern:&str,grid:&Vec<Vec<char>>, direction:Vector2i,position:Vector2i) -> bool
 {
     let mut check_pos=position;
-    let x=check_pos.x;
-    let y=check_pos.y;
-    println!("Checking pos {x},{y} string {pattern}");
     for char in pattern.chars()
     {
-        let x=check_pos.x;
-        let y=check_pos.y;
+        // Bounds check
         if check_pos.x<0 || check_pos.x>= grid[0].len() as i32 || check_pos.y<0 || check_pos.y>=grid.len() as i32
         {
-
-            //println!("\tOut of bounds {x},{y}");
             return false;
         }
+        // Match char
         if grid[check_pos.x as usize][check_pos.y as usize]!=char
         {
-            let test_char=grid[check_pos.x as usize][check_pos.y as usize];
-            println!("\tChar mismatch {test_char},{char}");
-            // Check match
             return false;
         }
         check_pos=check_pos.add(direction);
@@ -35,7 +26,7 @@ fn check_pattern(pattern:&str,grid:&Vec<Vec<char>>, direction:Vector2i,position:
 
 fn main()
 {
-
+    // All test directions
     let test_directions = vec![
         Vector2i::new(1,0),
         Vector2i::new(1,1),
@@ -47,26 +38,27 @@ fn main()
         Vector2i::new(1,-1),
     ];
 
+    // The word to find
     let search_term="XMAS";
-    let contents = fs::read_to_string("data/test_input")
+    let contents = fs::read_to_string("data/input")
         .expect("Should have been able to read the file");
 
     let lines = contents.split("\n");
     // Use first line as ref
     let grid_width=lines.clone().into_iter().next().unwrap().len();
-    let mut grid_height=0;
-    let mut char_line_vec:Vec<Vec<char>>=Vec::new();
+    let mut char_grid:Vec<Vec<char>>=Vec::new();
 
+    // Build the 2D grid of characters
     for line in lines
     {
-        if (line.len()==grid_width)
+        if line.len()==grid_width
         {
             let char_array=line.chars().collect();
-            char_line_vec.push(char_array);
+            char_grid.push(char_array);
         }
     }
 
-    let grid_height=char_line_vec.len();
+    let grid_height=char_grid.len();
     println!("Grid size is {grid_width}x{grid_height}");
 
     let mut pass_count=0;
@@ -76,7 +68,7 @@ fn main()
         {
             for direction in &test_directions
             {
-                if check_pattern(search_term, &char_line_vec, *direction, Vector2i::new(column as i32, row as i32))
+                if check_pattern(search_term, &char_grid, *direction, Vector2i::new(column as i32, row as i32))
                 {
                     pass_count+=1;
                 }
@@ -84,21 +76,41 @@ fn main()
         }
     }
     println!("Pass count is {pass_count}");
-    /*
-    // From https://stackoverflow.com/questions/13212212/creating-two-dimensional-arrays-in-rust
-    let mut grid_raw = vec![0; grid_width * grid_height];
 
-    let mut grid_base: Vec<_> = grid_raw.as_mut_slice().chunks_mut(grid_width).collect();
+    // Part 2, check for specific pattern
 
-    // Final 2d array `&mut [&mut [_]]`
-    let grid = grid_base.as_mut_slice();
-
-    // Accessing data
-    grid[0][0] = 4;
-
-    for line in lines
+    let pt2_search_term="MAS";
+    // Valid directions
+    let pt2_test_directions = vec![
+        Vector2i::new(1,1),
+        Vector2i::new(-1,1),
+        Vector2i::new(-1,-1),
+        Vector2i::new(1,-1),
+    ];
+    let mut patterns_found=0;
+    for row in 0..grid_height
     {
+        for column in 0..grid_width
+        {
+            let mut pos_pass_count=0;
+            for direction in &pt2_test_directions
+            {
+                let mut start_position=Vector2i::new(column as i32, row as i32);
+                // move one pos in the opposite direction to determine start pos
+                start_position=start_position.sub(*direction);
 
+                if check_pattern(pt2_search_term, &char_grid, *direction, start_position)
+                {
+                    pos_pass_count+=1;
+                }
+            }
+            // If two diagonals found, pass
+            if pos_pass_count==2
+            {
+                patterns_found += 1;
+            }
+
+        }
     }
-    */
+    println!("PT2 - X-MAS patterns found {patterns_found}");
 }
