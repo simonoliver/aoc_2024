@@ -1,0 +1,7 @@
+[package]
+name = "AdventOfCode_2024_Day_04"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+math2d = "0.1.3"
