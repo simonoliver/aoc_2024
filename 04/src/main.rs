@@ -13,17 +13,22 @@ fn check_pattern(pattern:&str,grid:&Vec<Vec<char>>, direction:Vector2i,position:
     println!("Checking pos {x},{y} string {pattern}");
     for char in pattern.chars()
     {
+        let x=check_pos.x;
+        let y=check_pos.y;
         if check_pos.x<0 || check_pos.x>= grid[0].len() as i32 || check_pos.y<0 || check_pos.y>=grid.len() as i32
         {
+
+            //println!("\tOut of bounds {x},{y}");
             return false;
         }
         if grid[check_pos.x as usize][check_pos.y as usize]!=char
         {
-
+            let test_char=grid[check_pos.x as usize][check_pos.y as usize];
+            println!("\tChar mismatch {test_char},{char}");
             // Check match
             return false;
         }
-        check_pos.add(direction);
+        check_pos=check_pos.add(direction);
     }
     true
 }
