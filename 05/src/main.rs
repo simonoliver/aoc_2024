@@ -49,11 +49,72 @@ fn test_update_validity(page_update: &Vec<i32>,rules:&Vec<(i32,i32)>) -> bool
     true
 }
 
+fn repair_page_updates(page_update: &mut Vec<i32>,rules:&Vec<(i32,i32)>) -> bool
+{
+
+    let mut all_rules_passed=false;
+    let mut rule_repaired=false;
+    while !all_rules_passed
+    {
+        // Keep checking for swaps until all rules pass
+        let mut rule_failure=false;
+        // We'll clone to avoid weird borrowing issue
+        for (index,page_id) in page_update.clone().iter().enumerate()
+        {
+
+            // Test against every rule
+            for (rule_left,rule_right) in rules
+            {
+
+                // If the page matches the left side of the rule, then the second part must NOT come before it
+                if page_id==rule_left
+                {
+                    if page_update[0..index].contains(rule_right) {
+                        // Swap
+                        let replace_index=(page_update.iter().position(|&r| r==*rule_right)).unwrap();
+                        page_update[replace_index]=*rule_left;
+                        page_update[index]=*rule_right;
+                        rule_failure=true;
+                    }
+                }
+                // If the page matches the right side of the rule, then the second part must NOT come before it
+                else if page_id==rule_right
+                {
+                    if page_update[index..].contains(rule_left) {
+                        let replace_index=(page_update.iter().position(|&r| r==*rule_left)).unwrap();
+                        page_update[replace_index]=*rule_right;
+                        page_update[index]=*rule_left;
+                        rule_failure=true;
+                    }
+                }
+                if rule_failure // We've done a swap. Loop again
+                {
+                    continue;
+                }
+            }
+            if rule_failure // We've done a swap. Loop again
+            {
+                continue;
+            }
+        }
+
+        if rule_failure {
+            // If repaired, we'll track
+            rule_repaired=true;
+        }
+        else {
+            // If no rules failed, this is now ready
+            all_rules_passed = true;
+        }
+    }
+    rule_repaired
+
+}
+
 
 
 fn main()
 {
-    println!("Hello, world!");
     let contents=fs::read_to_string("data/test_input").expect("Should have been able to read file");
 
     let lines = contents.split("\n");
@@ -90,7 +151,7 @@ fn main()
     let page_update_count=page_updates.len();
     println!("Rules Count {rule_count} page updates {page_update_count}");
     let mut middle_page_sum=0;
-    for page_update in page_updates
+    for page_update in &page_updates
     {
         if test_update_validity(&page_update,&order_rules)
         {
@@ -99,4 +160,18 @@ fn main()
         }
     }
     println!("Part 1 - Middle Page Sum {middle_page_sum}");
+
+    // Part 2 - Fix up the data
+    middle_page_sum=0; // Reset sum
+    for mut page_update in page_updates
+    {
+        if repair_page_updates(&mut page_update,&order_rules)
+        {
+            // Add the middle page number after this update
+            middle_page_sum += &page_update[(page_update.len() - 1) / 2];
+        }
+    }
+    println!("Part 2 - Middle Page Sum {middle_page_sum}");
+
 }
+
