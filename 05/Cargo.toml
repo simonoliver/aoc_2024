@@ -1,0 +1,6 @@
+[package]
+name = "AdventOfCode_2024_Day_05"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
