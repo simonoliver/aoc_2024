@@ -1,5 +1,4 @@
-use std::{fs, io};
-use std::ops::Index;
+use std::fs;
 
 fn get_order_rule(line:&str) -> Result<(i32, i32), std::num::ParseIntError>
 {
