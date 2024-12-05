@@ -12,7 +12,7 @@ fn get_order_rule(line:&str) -> Result<(i32, i32), std::num::ParseIntError>
 fn get_int_vector(line:&str) -> Result<Vec<i32>, std::num::ParseIntError>
 {
     let mut int_value_vector:Vec<i32>=Vec::new();
-    let mut splitter = line.split(",");
+    let splitter = line.split(",");
     for value in splitter
     {
         let next_val=value.parse::<i32>()?;
@@ -58,33 +58,39 @@ fn repair_page_updates(page_update: &mut Vec<i32>,rules:&Vec<(i32,i32)>) -> bool
     {
         // Keep checking for swaps until all rules pass
         let mut rule_failure=false;
-        // We'll clone to avoid weird borrowing issue
-        for (index,page_id) in page_update.clone().iter().enumerate()
-        {
+        // We need to use iter_mut as will be modifying these values
+        //for (index,page_id) in page_update.iter_mut().enumerate()
 
+        for index in 1..page_update.len()
+        {
+            let page_id=page_update[index];
             // Test against every rule
             for (rule_left,rule_right) in rules
             {
+                // Clone the values to test against
+                //let page_update_clone=page_update.clone();
 
                 // If the page matches the left side of the rule, then the second part must NOT come before it
-                if page_id==rule_left
+                if page_id==*rule_left
                 {
                     if page_update[0..index].contains(rule_right) {
                         // Swap
-                        let replace_index=(page_update.iter().position(|&r| r==*rule_right)).unwrap();
+                        let replace_index= page_update.iter().position(|&r| r==*rule_right).unwrap();
                         page_update[replace_index]=*rule_left;
                         page_update[index]=*rule_right;
                         rule_failure=true;
+                        println!("L: Swapped index {replace_index}({rule_right}), with {index}({rule_left})")
                     }
                 }
                 // If the page matches the right side of the rule, then the second part must NOT come before it
-                else if page_id==rule_right
+                else if page_id==*rule_right
                 {
                     if page_update[index..].contains(rule_left) {
-                        let replace_index=(page_update.iter().position(|&r| r==*rule_left)).unwrap();
+                        let replace_index= page_update.iter().position(|&r| r==*rule_left).unwrap();
                         page_update[replace_index]=*rule_right;
                         page_update[index]=*rule_left;
                         rule_failure=true;
+                        println!("R: Swapped index {replace_index}({rule_left}), with {index}({rule_right})")
                     }
                 }
                 if rule_failure // We've done a swap. Loop again
@@ -169,6 +175,8 @@ fn main()
         {
             // Add the middle page number after this update
             middle_page_sum += &page_update[(page_update.len() - 1) / 2];
+            let csv_string=page_update.iter().map(|x| x.to_string()+",").collect::<String>();
+            println!("Fixed line {csv_string}");
         }
     }
     println!("Part 2 - Middle Page Sum {middle_page_sum}");
