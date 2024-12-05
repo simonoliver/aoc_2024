@@ -49,79 +49,56 @@ fn test_update_validity(page_update: &Vec<i32>,rules:&Vec<(i32,i32)>) -> bool
     true
 }
 
-fn repair_page_updates(page_update: &mut Vec<i32>,rules:&Vec<(i32,i32)>) -> bool
+
+fn repair_first_rule_page_updates(page_update: &mut Vec<i32>,rules:&Vec<(i32,i32)>) -> bool
 {
+    // We need to use iter_mut as will be modifying these values
+    //for (index,page_id) in page_update.iter_mut().enumerate()
 
-    let mut all_rules_passed=false;
-    let mut rule_repaired=false;
-    while !all_rules_passed
+    for index in 1..page_update.len()
     {
-        // Keep checking for swaps until all rules pass
-        let mut rule_failure=false;
-        // We need to use iter_mut as will be modifying these values
-        //for (index,page_id) in page_update.iter_mut().enumerate()
-
-        for index in 1..page_update.len()
+        let page_id=page_update[index];
+        // Test against every rule
+        for (rule_left,rule_right) in rules
         {
-            let page_id=page_update[index];
-            // Test against every rule
-            for (rule_left,rule_right) in rules
-            {
-                // Clone the values to test against
-                //let page_update_clone=page_update.clone();
+            // Currently the indices are wrong on replace_index
 
-                // If the page matches the left side of the rule, then the second part must NOT come before it
-                if page_id==*rule_left
-                {
-                    if page_update[0..index].contains(rule_right) {
-                        // Swap
-                        let replace_index= page_update.iter().position(|&r| r==*rule_right).unwrap();
-                        page_update[replace_index]=*rule_left;
-                        page_update[index]=*rule_right;
-                        rule_failure=true;
-                        println!("L: Swapped index {replace_index}({rule_right}), with {index}({rule_left})")
-                    }
-                }
-                // If the page matches the right side of the rule, then the second part must NOT come before it
-                else if page_id==*rule_right
-                {
-                    if page_update[index..].contains(rule_left) {
-                        let replace_index= page_update.iter().position(|&r| r==*rule_left).unwrap();
-                        page_update[replace_index]=*rule_right;
-                        page_update[index]=*rule_left;
-                        rule_failure=true;
-                        println!("R: Swapped index {replace_index}({rule_left}), with {index}({rule_right})")
-                    }
-                }
-                if rule_failure // We've done a swap. Loop again
-                {
-                    continue;
+            // If the page matches the left side of the rule, then the second part must NOT come before it
+            if page_id==*rule_left
+            {
+                if page_update[0..index].contains(rule_right) {
+                    // Swap
+                    let replace_index= page_update.iter().position(|&r| r==*rule_right).unwrap();
+                    page_update[replace_index]=*rule_left;
+                    page_update[index]=*rule_right;
+                    //let csv_string=page_update.iter().map(|x| x.to_string()+",").collect::<String>();
+                    //println!("L: Swapped index {replace_index}({rule_right}), with {index}({rule_left}) now {csv_string}");
+                    return true;
                 }
             }
-            if rule_failure // We've done a swap. Loop again
+            // If the page matches the right side of the rule, then the second part must NOT come before it
+            else if page_id==*rule_right
             {
-                continue;
+                if page_update[index..].contains(rule_left) {
+                    let replace_index= page_update.iter().position(|&r| r==*rule_left).unwrap();
+                    page_update[replace_index]=*rule_right;
+                    page_update[index]=*rule_left;
+                    //let csv_string=page_update.iter().map(|x| x.to_string()+",").collect::<String>();
+                    //println!("R: Swapped index {replace_index}({rule_left}), with {index}({rule_right}) - Now {csv_string}");
+                    return true;
+                }
             }
-        }
-
-        if rule_failure {
-            // If repaired, we'll track
-            rule_repaired=true;
-        }
-        else {
-            // If no rules failed, this is now ready
-            all_rules_passed = true;
         }
     }
-    rule_repaired
+
+    false
 
 }
 
 
-
 fn main()
 {
-    let contents=fs::read_to_string("data/test_input").expect("Should have been able to read file");
+    let contents=fs::read_to_string("data/input").expect("Should have been able to read file");
 
     let lines = contents.split("\n");
 
@@ -171,12 +148,18 @@ fn main()
     middle_page_sum=0; // Reset sum
     for mut page_update in page_updates
     {
-        if repair_page_updates(&mut page_update,&order_rules)
+        let mut was_repaired=false;
+        // one at a time
+        while repair_first_rule_page_updates(&mut page_update,&order_rules)
+        {
+            was_repaired=true;
+        }
+        if was_repaired
         {
             // Add the middle page number after this update
             middle_page_sum += &page_update[(page_update.len() - 1) / 2];
-            let csv_string=page_update.iter().map(|x| x.to_string()+",").collect::<String>();
-            println!("Fixed line {csv_string}");
+            //let csv_string=page_update.iter().map(|x| x.to_string()+",").collect::<String>();
+            //println!("Fixed line {csv_string}");
         }
     }
     println!("Part 2 - Middle Page Sum {middle_page_sum}");
