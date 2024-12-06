@@ -27,7 +27,7 @@ fn process_agent_step(grid_data : &Vec<Vec<char>>, agent_state :&mut (i32,i32,i3
 
 fn main() {
 
-    let contents=std::fs::read_to_string("data/test_input").expect("Should be able to load");
+    let contents=std::fs::read_to_string("data/input").expect("Should be able to load");
     let lines=contents.split("\n");
     let mut grid_data:Vec<Vec<char>>=lines.filter(|line|line.len()>0).into_iter().map(|line|line.chars().collect()).collect(); // Prase grid
     let (_,agent_row,agent_column)=find_first_char(&grid_data,'^');
@@ -53,6 +53,7 @@ fn main() {
     for row_index in 0..grid_data.len() {
         for column_index in 0..columns {
             if grid_data[row_index][column_index]=='.' { // only try if this is already an empty space?
+                println!("Testing row {row_index}, column {column_index}");
                 // Keep previous states
                 grid_data[row_index][column_index]='#'; // Temp set an obstacle
                 let mut agent_state=(agent_row,agent_column,0); // Row/column/direction (0=up,1=right,2=down,3=left)
