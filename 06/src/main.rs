@@ -18,7 +18,7 @@ fn process_agent_step(grid_data : &Vec<Vec<char>>, agent_state :&mut (i32,i32,i3
     if next_step.0<0 || next_step.0>=(grid_data.len() as i32) // Row bounds check
         || next_step.1<0 || next_step.1>=(grid_data[0].len() as i32) {return (false,0)} // Column Bounds check
 
-    println!("Char at Row{} Column{} is {} Direction {}",next_step.0,next_step.1,grid_data[next_step.0 as usize][next_step.1 as usize],agent_state.2);
+    //println!("Char at Row{} Column{} is {} Direction {}",next_step.0,next_step.1,grid_data[next_step.0 as usize][next_step.1 as usize],agent_state.2);
     if grid_data[next_step.0 as usize][next_step.1 as usize]=='#'
         {agent_state.2=(agent_state.2+1)%4;(true,0)} // Rotate right, no step
     else
@@ -29,19 +29,44 @@ fn main() {
 
     let contents=std::fs::read_to_string("data/test_input").expect("Should be able to load");
     let lines=contents.split("\n");
-    let char_lines:Vec<Vec<char>>=lines.filter(|line|line.len()>0).into_iter().map(|line|line.chars().collect()).collect(); // Prase grid
-    let (_,agent_row,agent_column)=find_first_char(&char_lines,'^');
+    let mut grid_data:Vec<Vec<char>>=lines.filter(|line|line.len()>0).into_iter().map(|line|line.chars().collect()).collect(); // Prase grid
+    let (_,agent_row,agent_column)=find_first_char(&grid_data,'^');
     println!("Start Pos Row {agent_row} Column {agent_column},");
     let mut agent_state=(agent_row,agent_column,0); // Row/column/direction (0=up,1=right,2=down,3=left)
-    let mut steps=0;
+
+    // Pt 1
     let mut step_position_indices:Vec<i32>=Vec::new(); // All step positions
-    step_position_indices.push(agent_row*char_lines.len() as i32+agent_column); // Add start position
+    step_position_indices.push(agent_row*grid_data.len() as i32+agent_column); // Add start position
     loop {
-        let (valid_move,step_count)=process_agent_step(&char_lines, &mut agent_state);
-        steps+=step_count;
-        let step_position_index=agent_state.0*(char_lines.len() as i32)+agent_state.1;
+        let (valid_move,_)=process_agent_step(&grid_data, &mut agent_state);
+        let step_position_index=agent_state.0*(grid_data.len() as i32)+agent_state.1;
         if !step_position_indices.contains(&step_position_index) {step_position_indices.push(step_position_index);}
         if !valid_move {break}
     }
-    println!("Pt1 - Guard steps {steps} unique positions {}",step_position_indices.len());
+    println!("Pt1 - unique positions {}",step_position_indices.len());
+
+    // P2
+
+    let mut valid_loop_block_locations=0;
+    // Cycle through every position
+    let columns=grid_data[0].len();
+    for row_index in 0..grid_data.len() {
+        for column_index in 0..columns {
+            if grid_data[row_index][column_index]=='.' { // only try if this is already an empty space?
+                // Keep previous states
+                grid_data[row_index][column_index]='#'; // Temp set an obstacle
+                let mut agent_state=(agent_row,agent_column,0); // Row/column/direction (0=up,1=right,2=down,3=left)
+                let mut previous_states:Vec<(i32,i32,i32)>=Vec::new(); // All states (we'll check for duplicates)
+                previous_states.push(agent_state);
+                loop {
+                    let (valid_move,_)=process_agent_step(&grid_data, &mut agent_state);
+                    if !valid_move {break}
+                    if previous_states.contains(&agent_state) {valid_loop_block_locations+=1;break} // Back at a previous location and orientation!
+                    previous_states.push(agent_state); // Add agent state to states to check
+                }
+                grid_data[row_index][column_index]='.'; // Restore to original empty space
+            }
+        }
+    }
+    println!("Pt2 - valid blocking positions {}",valid_loop_block_locations);
 }
