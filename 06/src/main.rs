@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 
 const MOVE_DIRECTIONS:[(i32, i32);4]=[(-1, 0),(0, 1),(1, 0),(0, -1)]; // Move directions. Up, right, down, left
 fn find_first_char(grid_data : &Vec<Vec<char>>,search_char : char) -> (bool,i32,i32)
@@ -57,13 +58,13 @@ fn main() {
                 // Keep previous states
                 grid_data[row_index][column_index]='#'; // Temp set an obstacle
                 let mut agent_state=(agent_row,agent_column,0); // Row/column/direction (0=up,1=right,2=down,3=left)
-                let mut previous_states:Vec<(i32,i32,i32)>=Vec::new(); // All states (we'll check for duplicates)
-                previous_states.push(agent_state);
+                let mut previous_states:HashMap<(i32,i32,i32),bool>=HashMap::new(); // All states (we'll check for duplicates)
+                previous_states.insert(agent_state,true);
                 loop {
                     let (valid_move,_)=process_agent_step(&grid_data, &mut agent_state);
                     if !valid_move {break}
-                    if previous_states.contains(&agent_state) {valid_loop_block_locations+=1;break} // Back at a previous location and orientation!
-                    previous_states.push(agent_state); // Add agent state to states to check
+                    if previous_states.contains_key(&agent_state) {valid_loop_block_locations+=1;break} // Back at a previous location and orientation!
+                    previous_states.insert(agent_state,true); // Add agent state to states to check
                 }
                 grid_data[row_index][column_index]='.'; // Restore to original empty space
             }
