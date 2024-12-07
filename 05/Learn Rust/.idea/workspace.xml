@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e5b73131-5a4d-4e65-b9d4-97af18ff794c" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:dev" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;simonoliver&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/simonoliver/aoc_2024.git&quot;,
+    &quot;accountId&quot;: &quot;8a5eab78-751f-43a1-96bb-bfca30b53b03&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/Accessing Values in a Hash Map/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/Accessing Values in a Hash Map/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/Build Scores Table/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/Build Scores Table/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/Build Scores Table/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/Build Scores Table/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/Creating a New Hash Map/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/Creating a New Hash Map/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/Fruits Delivery/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/Fruits Delivery/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/Fruits Delivery/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/Fruits Delivery/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/Hash Maps and Ownership/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/Hash Maps and Ownership/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/More Fruits/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/More Fruits/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/More Fruits/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/More Fruits/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/Updating a Hash Map/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Hashmaps/Updating a Hash Map/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Options/Check Clippy for Option/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Options/Check Clippy for Option/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Options/Check More Clippy Suggestions/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Options/Check More Clippy Suggestions/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Options/Optional Value/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Options/Optional Value/runConfigurations/Test.run.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Options/Optional Value/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Options/Optional Value/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Options/Use Option/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Options/Use Option/runConfigurations/Test.run.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Options/Use Option/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Options/Use Option/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Creating a New String/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Creating a New String/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Indexing into Strings/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Indexing into Strings/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Iterating Over Strings/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Iterating Over Strings/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Process Some Strings/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Process Some Strings/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Process Some Strings/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Process Some Strings/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Return a String/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Return a String/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Return a String/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Slicing Strings/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Slicing Strings/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/String Slice/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/String Slice/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/String Slice/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/String Transformer/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/String Transformer/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/String Transformer/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/String Transformer/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Strings and strs/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Strings and strs/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Strings and strs/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Summary/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Summary/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Updating a String/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Strings/Updating a String/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Count Typed Cells/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Count Typed Cells/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Count Typed Cells/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Count Typed Cells/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Create a Vector on Your Own/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Create a Vector on Your Own/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Create a Vector on Your Own/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Create a Vector on Your Own/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Creating a New Vector/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Creating a New Vector/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Dropping a Vector Drops Its Elements/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Dropping a Vector Drops Its Elements/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Iterating over the Values in a Vector/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Iterating over the Values in a Vector/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Loop Over a Vector/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Loop Over a Vector/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Loop Over a Vector/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Loop Over a Vector/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Reading Elements of Vectors/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Reading Elements of Vectors/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Reference vs push/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Reference vs push/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Updating a Vector/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Updating a Vector/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Using an Enum to Store Multiple Types/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Collections/Vectors/Using an Enum to Store Multiple Types/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Boolean Test/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Boolean Test/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Boolean Test/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Booleans/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Booleans/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Characters Test/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Characters Test/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Characters Test/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Characters/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Characters/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Floating-Point Types/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Floating-Point Types/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Integer Types/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Integer Types/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Numeric Operations/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Numeric Operations/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Numeric Test/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Numeric Test/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Numeric Test/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Use Clippy as External Linter/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Basic Data Types/Use Clippy as External Linter/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Conditions/Add Conditions/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Conditions/Add Conditions/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Conditions/Add Conditions/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Conditions/Add Conditions/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Conditions/If Task/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Conditions/If Task/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Conditions/If Task/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Conditions/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Conditions/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Conditions/Managing Conditions/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Conditions/Managing Conditions/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Conditions/Using if in a let Statement/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Conditions/Using if in a let Statement/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Conditions/else if/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Conditions/else if/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Defining a Function/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Defining a Function/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Defining a Function/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Extract Method Refactoring/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Extract Method Refactoring/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Function Parameters/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Function Parameters/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Functions with Return Values/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Functions with Return Values/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Passing an Argument/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Passing an Argument/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Passing an Argument/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Return Type/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Return Type/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Return Type/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Return a Value/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Return a Value/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Return a Value/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Statements and Expressions/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Statements and Expressions/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Type Annotation of a Parameter/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Type Annotation of a Parameter/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Functions/Type Annotation of a Parameter/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Repetitions/Conditional Loops with while/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Repetitions/Conditional Loops with while/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Repetitions/Find a sum/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Repetitions/Find a sum/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Repetitions/Find a sum/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Repetitions/Looping Through an Array with for/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Repetitions/Looping Through an Array with for/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Repetitions/Looping through Ranges/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Repetitions/Looping through Ranges/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Repetitions/Print Months/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Repetitions/Print Months/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Repetitions/Print Months/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Repetitions/Repetition with Loops/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Repetitions/Repetition with Loops/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Tuples and Arrays/Create an Array/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Tuples and Arrays/Create an Array/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Tuples and Arrays/Create an Array/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Tuples and Arrays/Destructure a Tuple/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Tuples and Arrays/Destructure a Tuple/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Tuples and Arrays/Destructure a Tuple/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Tuples and Arrays/The Array Type/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Tuples and Arrays/The Array Type/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Tuples and Arrays/The Tuple Type/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Tuples and Arrays/The Tuple Type/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Tuples and Arrays/Tuple Index/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Tuples and Arrays/Tuple Index/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Tuples and Arrays/Tuple Index/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables, Functions, and Conditions Test/Calculate Price/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables, Functions, and Conditions Test/Calculate Price/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables, Functions, and Conditions Test/Calculate Price/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Changing Type/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Changing Type/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Changing Type/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Constant Type/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Constant Type/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Constant Type/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Constants/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Constants/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Introduce Variable Refactoring/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Introduce Variable Refactoring/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Mutable Variable Binding/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Mutable Variable Binding/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Mutable Variable Binding/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/New Variable Binding/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/New Variable Binding/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/New Variable Binding/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Shadowing/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Shadowing/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Value/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Value/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Value/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Variable Type/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Variable Type/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Variable Type/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Variables and Mutability/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Common Programming Concepts/Variables/Variables and Mutability/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/A Shortcut for Propagating Errors/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/A Shortcut for Propagating Errors/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Matching Result 2/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Matching Result 2/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Matching Result 2/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Matching Result/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Matching Result/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Matching Result/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Matching on Different Errors/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Matching on Different Errors/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Propagating Errors Limitations/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Propagating Errors Limitations/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Propagating Errors/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Propagating Errors/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Recoverable Errors with Result/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Recoverable Errors with Result/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Returning Result/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Returning Result/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Returning Result/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Shortcuts for Panic on Error - unwrap and expect/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Shortcuts for Panic on Error - unwrap and expect/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Summary/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Summary/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Unrecoverable Errors with panic/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Unrecoverable Errors with panic/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Using a panic Backtrace/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Error Handling/Using a panic Backtrace/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Errors Primer/Advanced Errors 2/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Errors Primer/Advanced Errors 2/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Errors Primer/Advanced Errors 2/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Errors Primer/Advanced Errors 2/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Errors Primer/Advanced Errors/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Errors Primer/Advanced Errors/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Errors Primer/Advanced Errors/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Errors Primer/Advanced Errors/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Errors Primer/Custom Errors/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Errors Primer/Custom Errors/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Errors Primer/Custom Errors/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Errors Primer/Custom Errors/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Errors Primer/Multiple Errors/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Errors Primer/Multiple Errors/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Errors Primer/Multiple Errors/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Errors Primer/Multiple Errors/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Errors Primer/Positive Nonzero Integer/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Errors Primer/Positive Nonzero Integer/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Error Handling/Errors Primer/Positive Nonzero Integer/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/Arc/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/Arc/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/Arc/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/Atomic Reference Counting with Arc/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/Atomic Reference Counting with Arc/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/Multiple Ownership with Multiple Threads/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/Multiple Ownership with Multiple Threads/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/Sharing a Mutex Between Multiple Threads/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/Sharing a Mutex Between Multiple Threads/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/Similarities Between RefCell-Rc and Mutex-Arc/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/Similarities Between RefCell-Rc and Mutex-Arc/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/The API of Mutex/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/The API of Mutex/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/Threads Task/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/Threads Task/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/Threads Task/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/Using Mutexes/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Shared-State Concurrency/Using Mutexes/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Message Passing to Transfer Data Between Threads/Channels and Ownership Transference/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Message Passing to Transfer Data Between Threads/Channels and Ownership Transference/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Message Passing to Transfer Data Between Threads/Creating Multiple Producers by Cloning the Transmitter/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Message Passing to Transfer Data Between Threads/Creating Multiple Producers by Cloning the Transmitter/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Message Passing to Transfer Data Between Threads/Creating a Channel/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Message Passing to Transfer Data Between Threads/Creating a Channel/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Message Passing to Transfer Data Between Threads/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Message Passing to Transfer Data Between Threads/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Message Passing to Transfer Data Between Threads/Receiving Values/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Message Passing to Transfer Data Between Threads/Receiving Values/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Message Passing to Transfer Data Between Threads/Sending Multiple Values and Seeing the Receiver Waiting/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Message Passing to Transfer Data Between Threads/Sending Multiple Values and Seeing the Receiver Waiting/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Message Passing to Transfer Data Between Threads/Sending Values/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Message Passing to Transfer Data Between Threads/Sending Values/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Message Passing to Transfer Data Between Threads/Sum All Numbers/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Message Passing to Transfer Data Between Threads/Sum All Numbers/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Message Passing to Transfer Data Between Threads/Sum All Numbers/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Threads to Run Code Simultaneously/Creating a New Thread with spawn/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Threads to Run Code Simultaneously/Creating a New Thread with spawn/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Threads to Run Code Simultaneously/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Threads to Run Code Simultaneously/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Threads to Run Code Simultaneously/Join All Handles/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Threads to Run Code Simultaneously/Join All Handles/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Threads to Run Code Simultaneously/Join All Handles/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Threads to Run Code Simultaneously/Using move Closures with Threads/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Threads to Run Code Simultaneously/Using move Closures with Threads/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Threads to Run Code Simultaneously/Waiting for All Threads to Finish Using join Handles/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Fearless Concurrency/Using Threads to Run Code Simultaneously/Waiting for All Threads to Finish Using join Handles/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/Generics in Structs/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/Generics in Structs/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/Generics in Structs/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/Generics in Structs/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/Generics in Vec/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/Generics in Vec/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/Generics in Vec/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/In Enum Definitions/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/In Enum Definitions/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/In Function Definitions/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/In Function Definitions/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/In Method Definitions/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/In Method Definitions/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/In Struct Definitions/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/In Struct Definitions/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/Mixing Generic Types/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/Mixing Generic Types/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/Performance of Code Using Generics/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Generic Data Types/Performance of Code Using Generics/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Intro/Code without Duplications/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Intro/Code without Duplications/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Intro/Computing the Largest Number/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Intro/Computing the Largest Number/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Intro/Duplicated Code Fragments/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Intro/Duplicated Code Fragments/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Intro/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Intro/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Intro/Removing Duplication by Refactorings/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Intro/Removing Duplication by Refactorings/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Generic Lifetimes in Functions/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Generic Lifetimes in Functions/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Generic Type Parameters, Trait Bounds, and Lifetimes Together/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Generic Type Parameters, Trait Bounds, and Lifetimes Together/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Lifetime Annotation Syntax/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Lifetime Annotation Syntax/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Lifetime Annotations in Function Signatures/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Lifetime Annotations in Function Signatures/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Lifetime Annotations in Method Definitions/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Lifetime Annotations in Method Definitions/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Lifetime Annotations in Struct Definitions/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Lifetime Annotations in Struct Definitions/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Lifetime Elision/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Lifetime Elision/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Lifetime Going Out of Scope/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Lifetime Going Out of Scope/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Lifetimes for Structs with References/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Lifetimes for Structs with References/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Lifetimes for Structs with References/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Pattern Binding/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Pattern Binding/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Pattern Binding/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Preventing Dangling References with Lifetimes/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Preventing Dangling References with Lifetimes/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Specify Lifetimes/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Specify Lifetimes/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Specify Lifetimes/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Summary/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Summary/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/The Borrow Checker/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/The Borrow Checker/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/The Static Lifetime/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/The Static Lifetime/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Thinking in Terms of Lifetimes/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Thinking in Terms of Lifetimes/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Unify Lifetimes/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Unify Lifetimes/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Lifetimes/Unify Lifetimes/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Calling Methods Without Default Implementations/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Calling Methods Without Default Implementations/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Combine Traits/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Combine Traits/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Combine Traits/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Combine Traits/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Compare Licenses/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Compare Licenses/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Compare Licenses/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Compare Licenses/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Default Implementations/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Default Implementations/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Defining a Trait/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Defining a Trait/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Fixing the largest Function with Trait Bounds/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Fixing the largest Function with Trait Bounds/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Implementing a Trait on a Type/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Implementing a Trait on a Type/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/License It/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/License It/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/License It/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/License It/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Returning Types that Implement Traits/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Returning Types that Implement Traits/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/String Trait/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/String Trait/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/String Trait/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/String Trait/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Trait Bound Syntax/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Trait Bound Syntax/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Trait Bound Syntax/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Trait Bound Syntax/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Traits as Parameters/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Traits as Parameters/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Traits/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Traits/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Using Trait Bounds to Conditionally Implement Methods/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Using Trait Bounds to Conditionally Implement Methods/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Vec Trait/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Vec Trait/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Vec Trait/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Generic Types, Traits, and Lifetime/Traits/Vec Trait/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/About/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/About/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/Course View/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/Course View/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/Editor/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/Editor/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/External Linter/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/External Linter/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/Hello World/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/Hello World/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/Hello World/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/Navigating Around/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/Navigating Around/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/Task Description/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/Task Description/images/back.svg" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/Task Description/images/commentTask.svg" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/Task Description/images/forward.svg" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/Task Description/images/gear.svg" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/Task Description/images/hideToolWindow.svg" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/Task Description/images/reset.svg" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Introduction/Getting started/Task Description/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Declarative Macros/Calling a Macro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Declarative Macros/Calling a Macro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Declarative Macros/Calling a Macro/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Declarative Macros/Declarative Macros with macro_rules/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Declarative Macros/Declarative Macros with macro_rules/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Declarative Macros/Declaring a Macro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Declarative Macros/Declaring a Macro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Declarative Macros/Declaring a Macro/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Declarative Macros/Implement a Macro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Declarative Macros/Implement a Macro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Declarative Macros/Implement a Macro/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Declarative Macros/Macro Arms/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Declarative Macros/Macro Arms/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Declarative Macros/Macro Arms/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Declarative Macros/Outside of Module/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Declarative Macros/Outside of Module/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Declarative Macros/Outside of Module/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Intro/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Intro/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Intro/The Difference Between Macros and Functions/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Intro/The Difference Between Macros and Functions/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Procedural Macros/Attribute-like macros/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Procedural Macros/Attribute-like macros/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Procedural Macros/Function-like macros/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Procedural Macros/Function-like macros/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Procedural Macros/How to Write a Custom derive Macro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Procedural Macros/How to Write a Custom derive Macro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Procedural Macros/Procedural Macros for Generating Code from Attributes/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Procedural Macros/Procedural Macros for Generating Code from Attributes/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Procedural Macros/Summary/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Procedural Macros/Summary/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Procedural Macros/hello_macro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Procedural Macros/hello_macro/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Procedural Macros/hello_macro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Procedural Macros/hello_macro_derive/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Procedural Macros/hello_macro_derive/runConfigurations/Build.run.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Macros/Procedural Macros/hello_macro_derive/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Bringing Paths into Scope with the use Keyword/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Bringing Paths into Scope with the use Keyword/runConfigurations/Build.run.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Bringing Paths into Scope with the use Keyword/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Defining Modules/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Defining Modules/runConfigurations/Build.run.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Defining Modules/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Eating Some Snacks/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Eating Some Snacks/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Eating Some Snacks/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Exposing Paths with the pub Keyword/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Exposing Paths with the pub Keyword/runConfigurations/Build.run.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Exposing Paths with the pub Keyword/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Home Alone at Day X/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Home Alone at Day X/src/first_floor.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Home Alone at Day X/src/first_floor/guest_bedroom.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Home Alone at Day X/src/first_floor/master_bedroom.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Home Alone at Day X/src/first_floor/toys_room.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Home Alone at Day X/src/ground_floor.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Home Alone at Day X/src/ground_floor/big_hall.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Home Alone at Day X/src/ground_floor/kitchen.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Home Alone at Day X/src/ground_floor/storage_room.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Home Alone at Day X/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Home Alone at Day X/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Home Alone at Day X/src/second_floor.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Home Alone at Day X/src/second_floor/astronomy_tower.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Home Alone at Day X/src/second_floor/library.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Home Alone at Day X/src/second_floor/office.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Home Alone at Day X/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Making Structs and Enums Public/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Making Structs and Enums Public/runConfigurations/Build.run.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Making Structs and Enums Public/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Making a sausage/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Making a sausage/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Making a sausage/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Paths for Referring to an Item in the Module Tree/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Paths for Referring to an Item in the Module Tree/runConfigurations/Build.run.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Paths for Referring to an Item in the Module Tree/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Providing New Names with the as Keyword/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Providing New Names with the as Keyword/runConfigurations/Build.run.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Providing New Names with the as Keyword/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Quick Reference/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Quick Reference/src/garden.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Quick Reference/src/garden/vegetables.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Quick Reference/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Re-exporting Names with pub use/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Re-exporting Names with pub use/runConfigurations/Build.run.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Re-exporting Names with pub use/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Separating Modules into Different Files/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Separating Modules into Different Files/runConfigurations/Build.run.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Separating Modules into Different Files/src/front_of_house.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Separating Modules into Different Files/src/front_of_house/hosting.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Separating Modules into Different Files/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Starting Relative Paths with super/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Starting Relative Paths with super/runConfigurations/Build.run.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Starting Relative Paths with super/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Summary/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Summary/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/The Glob Operator/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/The Glob Operator/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Time To Check Time/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Time To Check Time/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Time To Check Time/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Using External Packages/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Using External Packages/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Using Nested Paths to Clean Up Large use Lists/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Modules/Modules/Using Nested Paths to Clean Up Large use Lists/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Closures/Capturing References or Moving Ownership/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Closures/Capturing References or Moving Ownership/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Closures/Capturing the Environment with Closures/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Closures/Capturing the Environment with Closures/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Closures/Closure Type Inference and Annotation/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Closures/Closure Type Inference and Annotation/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Closures/Example sort_by_key/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Closures/Example sort_by_key/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Closures/Filter a sequence with a closure/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Closures/Filter a sequence with a closure/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Closures/Filter a sequence with a closure/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Closures/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Closures/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Closures/Moving Captured Values Out of the Closure and the Fn Traits/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Closures/Moving Captured Values Out of the Closure and the Fn Traits/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Closures/unwrap_or_else/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Closures/unwrap_or_else/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Capitalize first/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Capitalize first/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Capitalize first/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Capitalize first/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Count Progress/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Count Progress/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Count Progress/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Count Progress/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Factorial/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Factorial/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Factorial/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Iterable Collection/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Iterable Collection/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Iterable Collection/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Iterator/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Iterator/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Iterator/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Loop Over Vector With Iterators/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Loop Over Vector With Iterators/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Loop Over Vector With Iterators/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Loop Over Vector With Iterators/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Methods that Consume the Iterator/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Methods that Consume the Iterator/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Methods that Produce Other Iterators/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Methods that Produce Other Iterators/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Processing a Series of Items with Iterators/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Processing a Series of Items with Iterators/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/The Iterator Trait and the next Method/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/The Iterator Trait and the next Method/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Using Closures that Capture Their Environment/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Iterators/Using Closures that Capture Their Environment/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Box Task/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Box Task/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Box Task/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Box Task/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Switch the Lamp/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Switch the Lamp/src/lamp.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Switch the Lamp/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Switch the Lamp/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Switch the Lamp/src/switcher.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Switch the Lamp/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Use Cow/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Use Cow/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Use Cow/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Use Rc/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Use Rc/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Use Rc/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Workers in the Engine/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Workers in the Engine/src/engine.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Workers in the Engine/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Workers in the Engine/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Workers in the Engine/src/worker.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Smart Pointers/Workers in the Engine/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/AsRef and AsMut/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/AsRef and AsMut/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/AsRef and AsMut/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/AsRef and AsMut/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/From Into/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/From Into/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/From Into/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/From Into/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/FromStr/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/FromStr/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/FromStr/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/FromStr/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/Try From Into/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/Try From Into/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/Try From Into/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/Try From Into/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/Using As/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/Using As/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/Using As/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Standard Library Types/Type Conversions/Using As/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Enums/Defining an Enum/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Enums/Defining an Enum/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Enums/Deliver Complex Messages/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Enums/Deliver Complex Messages/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Enums/Deliver Complex Messages/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Enums/Deliver Messages/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Enums/Deliver Messages/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Enums/Deliver Messages/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Enums/Enum Values with Data/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Enums/Enum Values with Data/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Enums/Enum Values with Different Data/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Enums/Enum Values with Different Data/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Enums/Enums with Data and Methods/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Enums/Enums with Data and Methods/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Enums/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Enums/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Enums/The Option Enum/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Enums/The Option Enum/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Pattern Matching/Catch-all Patterns and the _ Placeholder/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Pattern Matching/Catch-all Patterns and the _ Placeholder/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Pattern Matching/If Let/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Pattern Matching/If Let/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Pattern Matching/Implement Match/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Pattern Matching/Implement Match/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Pattern Matching/Implement Match/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Pattern Matching/Matches Are Exhaustive/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Pattern Matching/Matches Are Exhaustive/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Pattern Matching/Matching with Option/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Pattern Matching/Matching with Option/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Pattern Matching/Patterns that Bind to Values/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Pattern Matching/Patterns that Bind to Values/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Pattern Matching/Summary/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Pattern Matching/Summary/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Pattern Matching/The Match Operator/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Pattern Matching/The Match Operator/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs with Methods/Associated Functions and Multiple impl Blocks/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs with Methods/Associated Functions and Multiple impl Blocks/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs with Methods/Defining Methods/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs with Methods/Defining Methods/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs with Methods/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs with Methods/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs with Methods/Methods with More Parameters/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs with Methods/Methods with More Parameters/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs with Methods/Sending Packages/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs with Methods/Sending Packages/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs with Methods/Sending Packages/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs with Methods/Summary/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs with Methods/Summary/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Adding Useful Functionality with Derived Traits/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Adding Useful Functionality with Derived Traits/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Creating Instances From Other Instances/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Creating Instances From Other Instances/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Dealing with Rectangles/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Dealing with Rectangles/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Defining and Initiating Structs/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Defining and Initiating Structs/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Ownership of Struct Data/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Ownership of Struct Data/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Play with Color Structs/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Play with Color Structs/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Play with Color Structs/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Refactoring with Structs, Adding More Meaning/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Refactoring with Structs, Adding More Meaning/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Refactoring with Tuples/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Refactoring with Tuples/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Struct Update/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Struct Update/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Struct Update/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Tuple Structs/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Tuple Structs/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Using the Field Init Shorthand/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Structs, Methods, Enums, and Pattern Matching/Structs/Using the Field Init Shorthand/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Borrowing Values with References/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Borrowing Values with References/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Dangling References/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Dangling References/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Exclamations Strike Back/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Exclamations Strike Back/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Exclamations Strike Back/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Move, Borrow, Mutate, or What/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Move, Borrow, Mutate, or What/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Move, Borrow, Mutate, or What/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Mutable References/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Mutable References/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Print Months Once Again/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Print Months Once Again/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Print Months Once Again/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Reference Order/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Reference Order/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Reference Order/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Restriction of Mutable References/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Restriction of Mutable References/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Scopes of References/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/Scopes of References/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/The Last Revenge of Exclamations/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/The Last Revenge of Exclamations/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/The Last Revenge of Exclamations/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/The Rules of References/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/References and Borrowing/The Rules of References/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/Nice Slice/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/Nice Slice/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/Nice Slice/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/Other Slices/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/Other Slices/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/String Literals Are Slices/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/String Literals Are Slices/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/String Slices as Parameters/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/String Slices as Parameters/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/String Slices/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/String Slices/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/Summary/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/Summary/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/Summer Slice/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/Summer Slice/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/Summer Slice/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/Trim a String/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/Trim a String/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/Trim a String/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/Trim a String/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/Understanding Types/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/Understanding Types/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/The Slice Type/Understanding Types/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Build String from Literals/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Build String from Literals/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Build String from Literals/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Clone and Copy/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Clone and Copy/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Explore Scopes/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Explore Scopes/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Explore Scopes/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/More Exclamations 2/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/More Exclamations 2/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/More Exclamations 2/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/More Exclamations with Mutable Argument/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/More Exclamations with Mutable Argument/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/More Exclamations with Mutable Argument/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/More Exclamations without Arguments/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/More Exclamations without Arguments/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/More Exclamations without Arguments/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/More Exclamations/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/More Exclamations/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/More Exclamations/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Moving Ownership/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Moving Ownership/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Ownership and Functions/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Ownership and Functions/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Return Values and Scope/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Return Values and Scope/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/The String Type/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/The String Type/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Tuples, Clone or Copy/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Tuples, Clone or Copy/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Tuples, Clone or Copy/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Variable Scope/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Variable Scope/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Who Owns the One Ring/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Who Owns the One Ring/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Understanding Ownership/What is ownership/Who Owns the One Ring/tests/output.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Adding Custom Failure Messages/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Adding Custom Failure Messages/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Assert/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Assert/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Assert/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Assert_Eq/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Assert_Eq/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Assert_Eq/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Checking Results with the assert Macro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Checking Results with the assert Macro/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Checking for Panics with should_panic/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Checking for Panics with should_panic/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Intro/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Intro/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Testing Equality with the assert_eq and assert_ne Macros/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Testing Equality with the assert_eq and assert_ne Macros/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Testing a Function/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Testing a Function/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Testing a Function/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/The Anatomy of a Test Function/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/The Anatomy of a Test Function/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Using Result in Tests/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/How to Write Tests/Using Result in Tests/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/Running and Organizing Tests/Integration Tests/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/Running and Organizing Tests/Integration Tests/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/Running and Organizing Tests/Integration Tests/tests/integration_test.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/Running and Organizing Tests/Running Tests/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/Running and Organizing Tests/Running Tests/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/Running and Organizing Tests/Submodules in Integration Tests/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/Running and Organizing Tests/Submodules in Integration Tests/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/Running and Organizing Tests/Submodules in Integration Tests/tests/common/mod.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/Running and Organizing Tests/Submodules in Integration Tests/tests/integration_test.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/Running and Organizing Tests/Summary/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/Running and Organizing Tests/Summary/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/Running and Organizing Tests/Test Organization/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/Running and Organizing Tests/Test Organization/src/main.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/Running and Organizing Tests/Times Two Tests/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/Running and Organizing Tests/Times Two Tests/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/Running and Organizing Tests/Times Two Tests/tests/tests.rs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/Running and Organizing Tests/Unit Tests/Cargo.toml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Writing Automated Tests/Running and Organizing Tests/Unit Tests/src/lib.rs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="65dkernn" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2pod2akwQ7FS3bsWeeQ9pedSjh7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cargo.Build bringing_paths_into_scope_with_the_use_keyword.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Install cargo-expand.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Tests in 'tests'.executor&quot;: &quot;Run&quot;,
+    &quot;Edu.LearningObjectsStorageType&quot;: &quot;SQLite&quot;,
+    &quot;Edu.Yaml.Migrate&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
+    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
+    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;language.rust.cargo.check&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RsExternalLinterProjectSettings">
+    <option name="runOnTheFly" value="true" />
+    <option name="tool" value="Clippy" />
+  </component>
+  <component name="RunManager" selected="Cargo.Build bringing_paths_into_scope_with_the_use_keyword" />
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e5b73131-5a4d-4e65-b9d4-97af18ff794c" name="Changes" comment="" />
+      <created>1733436155297</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733436155297</updated>
+      <workItem from="1733436158425" duration="11396000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
