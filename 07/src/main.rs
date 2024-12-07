@@ -1,5 +1,5 @@
 
-fn test_valid_total(current_total:i32,target_total : i32, components: Vec<i32>) -> bool
+fn test_valid_total(current_total:i64,target_total : i64, components: Vec<i64>) -> bool
 {
     if components.len()==0 { return current_total==target_total;} // Reached end
     let next_component=components[0];
@@ -11,15 +11,15 @@ fn test_valid_total(current_total:i32,target_total : i32, components: Vec<i32>) 
 
 fn main() {
     println!("Hello, world!");
-    let contents=std::fs::read_to_string("data/test_input").expect("Expected to read file");
+    let contents=std::fs::read_to_string("data/input").expect("Expected to read file");
 
-    let input_data:Vec<(i32,Vec<i32>)>=contents.split("\n")
+    let input_data:Vec<(i64,Vec<i64>)>=contents.split("\n")
         .filter(|line|line.contains(":"))
         .map(|line_section|{
             let mut sections=line_section.split(":");
-            let total=sections.next().unwrap().parse::<i32>().unwrap();
+            let total=sections.next().unwrap().parse::<i64>().unwrap();
             let mut components=sections.next().unwrap().split(" ").filter(|component|component.len()>0);
-            let parsed_components:Vec<i32>=components.map(|component|component.parse::<i32>().unwrap()).collect();
+            let parsed_components:Vec<i64>=components.map(|component|component.parse::<i64>().unwrap()).collect();
             (total,parsed_components)
         }).collect();
 
