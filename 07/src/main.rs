@@ -1,4 +1,3 @@
-
 fn concat (val0:i64,val1:i64) -> i64 { format!("{}{}",val0.to_string(),val1.to_string()).parse::<i64>().unwrap() }
 
 fn test_valid_total(current_total:i64,target_total : i64, components: Vec<i64>, include_concat_test : bool) -> bool
