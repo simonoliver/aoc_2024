@@ -32,7 +32,8 @@ fn get_possible_output_values(current_total:i64, components: Vec<i64>) -> Vec<i6
         // Test concat with each of these as a potential value
         for concat_test in concat_test_values
         {
-            output_values.push(concat(current_total,concat_test));
+            output_values.push(concat(current_total+ next_component,concat_test));
+            output_values.push(concat(current_total* next_component,concat_test));
         }
     }
     output_values
@@ -46,16 +47,9 @@ fn test_valid_total(current_total:i64,target_total : i64, components: Vec<i64>, 
     remaining_components.remove(0);
 
     // Concat test
-    if include_concat_test && remaining_components.len()>=1
+    if include_concat_test
     {
-        // Test concatenation of next two component as well
-        let successive_component=remaining_components[0];
-        let mut remaining_components_one_removed=remaining_components.clone();
-        remaining_components_one_removed.remove(0);
-        // Test against concat component
-        let concat_component=concat(next_component,successive_component);
-        if test_valid_total(current_total+concat_component,target_total,remaining_components_one_removed.clone(),true)
-            || test_valid_total(current_total*concat_component,target_total,remaining_components_one_removed.clone(),true)
+        if test_valid_total(concat(current_total,next_component),target_total,remaining_components.clone(),true)
         {
             return true;
         }
@@ -68,7 +62,7 @@ fn test_valid_total(current_total:i64,target_total : i64, components: Vec<i64>, 
 
 fn main() {
     println!("Hello, world!");
-    let contents=std::fs::read_to_string("data/test_input").expect("Expected to read file");
+    let contents=std::fs::read_to_string("data/input").expect("Expected to read file");
 
     let input_data:Vec<(i64,Vec<i64>)>=contents.split("\n")
         .filter(|line|line.contains(":"))
@@ -97,8 +91,18 @@ fn main() {
     }
     println!("Pt1 - Solution test value sum: {}",valid_solutions_test_sum);
 
+
     // pt2
     let mut valid_solutions_test_sum_concat=0;
+    for (index,entry) in input_data.iter().enumerate()
+    {
+        if test_valid_total(0,entry.0,entry.1.clone(),true)
+        {
+            valid_solutions_test_sum_concat+=entry.0;
+        }
+    }
+
+    /*
     for (index,entry) in input_data.iter().enumerate()
     {
         let test_values=get_possible_output_values(0,entry.1.clone());
@@ -109,7 +113,12 @@ fn main() {
         }
         else {
             println!("Fail: {}",entry.0);
+            for test_val in test_values
+            {
+                println!("\tPossible val: {}",test_val);
+            }
         }
     }
+     */
     println!("Pt2 - Solution test concat included value sum: {}",valid_solutions_test_sum_concat);
 }
