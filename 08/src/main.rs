@@ -3,7 +3,7 @@ use math2d::Vector2i;
 
 fn main() {
 
-    let contents=std::fs::read_to_string("data/test_input").expect("Should be able to load");
+    let contents=std::fs::read_to_string("data/input").expect("Should be able to load");
     let lines=contents.split("\n");
     let mut grid_data:Vec<Vec<char>>=lines.filter(|line|line.len()>0).into_iter().map(|line|line.chars().collect()).collect(); // Parse grid
     let grid_width=grid_data[0].len() as i32;
