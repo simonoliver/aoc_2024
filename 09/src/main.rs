@@ -19,8 +19,7 @@ fn create_disk_map(input:&str) -> Vec::<(i64,bool)>
     disk_map
 }
 
-fn defrag_disk_data(vec_data : &mut Vec::<(i64,bool)>)
-{
+fn defrag_disk_data(vec_data : &mut Vec::<(i64,bool)>) {
     let mut dst_test_index=0;
     let mut defrag_src_index=(vec_data.len() as i32)-1;
 
@@ -41,6 +40,13 @@ fn defrag_disk_data(vec_data : &mut Vec::<(i64,bool)>)
     }
 }
 
+fn calc_checksum (vec_data : &Vec::<(i64,bool)>) -> i64{
+    let mut checksum=0;
+    for (index,data) in vec_data.iter().enumerate() {
+        if data.1 {checksum+=data.0*(index as i64)};
+    }
+    checksum
+}
 fn print_vec(vec_data : &Vec::<(i64,bool)>)
 {
     let mut output_string=String::new();
@@ -58,4 +64,5 @@ fn main() {
     print_vec(&disk_map);
     defrag_disk_data(&mut disk_map);
     print_vec(&disk_map);
+    println!("Pt1 - checksum {}",calc_checksum(&disk_map));
 }
