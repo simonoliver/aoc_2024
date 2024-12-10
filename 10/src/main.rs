@@ -13,7 +13,7 @@ fn find_digit_positions(topographic_map : &Vec<Vec<u32>>, digit : u32) -> Vec<(i
     found_positions
 }
 
-fn find_trails_with_target_height(topographic_map : &Vec<Vec<u32>>, current_pos:(i32,i32), target_height:u32) -> Vec<(i32,i32)>
+fn find_trails_with_target_height(topographic_map : &Vec<Vec<u32>>, current_pos:(i32,i32), target_height:u32,allow_multiple_routes:bool) -> Vec<(i32,i32)>
 {
     let mut found_trail_end_positions:Vec<(i32,i32)>=Vec::new(); // Track found trails
     let grid_width=topographic_map[0].len() as i32;
@@ -27,9 +27,9 @@ fn find_trails_with_target_height(topographic_map : &Vec<Vec<u32>>, current_pos:
                 if test_value==target_height {
                     found_trail_end_positions.push(test_pos); // End of the trail as found target height
                 } else {
-                    let sub_trail_positions=find_trails_with_target_height(topographic_map,test_pos,target_height); // Recurse
+                    let sub_trail_positions=find_trails_with_target_height(topographic_map,test_pos,target_height,allow_multiple_routes); // Recurse
                     for pos in sub_trail_positions {
-                        if !found_trail_end_positions.contains(&pos) {found_trail_end_positions.push(pos)};
+                        if !found_trail_end_positions.contains(&pos) || allow_multiple_routes  {found_trail_end_positions.push(pos)};
                     }
                 }
             }
@@ -39,8 +39,7 @@ fn find_trails_with_target_height(topographic_map : &Vec<Vec<u32>>, current_pos:
 }
 
 fn main() {
-    println!("Hello, world!");
-    let content=fs::read_to_string("data/test_input").expect("Expected to read the file");
+    let content=fs::read_to_string("data/input").expect("Expected to read the file");
     let lines=content.split("\n").filter(|line|line.len()>0);
     let mut topographic_map:Vec<Vec<u32>>=Vec::new();
     for line in lines {
@@ -48,19 +47,18 @@ fn main() {
     }
 
     println!("Grid size {}x{}",topographic_map[0].len(),topographic_map.len());
-
     let trail_start_positions=find_digit_positions(&topographic_map,0);
     let mut found_trails_total=0;
-    for trail_start_pos in trail_start_positions {
-
-        let found_trails_count=find_trails_with_target_height(&topographic_map,trail_start_pos,9);
-        println!("Trail start at {},{} - found {}",trail_start_pos.0,trail_start_pos.1,found_trails_count.len());
-        found_trails_total+=found_trails_count.len();
+    for trail_start_pos in trail_start_positions.clone() {
+        
+        found_trails_total+=find_trails_with_target_height(&topographic_map,trail_start_pos,9,false).len();
     }
-
     println!("Pt1 - Found trails total {}",found_trails_total);
 
-    //let mut topographic_map:Vec<Vec<u32>> =lines.into_iter()
-    //    .map(|line| line.chars().into_iter().map(|height_char|height_char.to_digit(10).unwrap()).collect();
-
+    let mut pt2_found_trails_total=0;
+    for trail_start_pos in trail_start_positions.clone() {
+        pt2_found_trails_total+=find_trails_with_target_height(&topographic_map,trail_start_pos,9,true).len();
+    }
+    println!("Pt2 - Found trails total {}",pt2_found_trails_total);
+    
 }
