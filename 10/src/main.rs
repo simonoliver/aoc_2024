@@ -13,9 +13,9 @@ fn find_digit_positions(topographic_map : &Vec<Vec<u32>>, digit : u32) -> Vec<(i
     found_positions
 }
 
-fn find_trails_with_target_height(topographic_map : &Vec<Vec<u32>>, current_pos:(i32,i32), target_height:u32) -> u32
+fn find_trails_with_target_height(topographic_map : &Vec<Vec<u32>>, current_pos:(i32,i32), target_height:u32) -> Vec<(i32,i32)>
 {
-    let mut found_trails_count=0; // Track found trails
+    let mut found_trail_end_positions:Vec<(i32,i32)>=Vec::new(); // Track found trails
     let grid_width=topographic_map[0].len() as i32;
     let grid_height=topographic_map.len() as i32;
     let start_value=topographic_map[current_pos.1 as usize][current_pos.0 as usize];
@@ -25,14 +25,17 @@ fn find_trails_with_target_height(topographic_map : &Vec<Vec<u32>>, current_pos:
             let test_value=topographic_map[test_pos.1 as usize][test_pos.0 as usize];
             if test_value==start_value+1 {
                 if test_value==target_height {
-                    found_trails_count+=1; // End of the trail as found target height
+                    found_trail_end_positions.push(test_pos); // End of the trail as found target height
                 } else {
-                    found_trails_count+=find_trails_with_target_height(topographic_map,test_pos,target_height); // Recurse
+                    let sub_trail_positions=find_trails_with_target_height(topographic_map,test_pos,target_height); // Recurse
+                    for pos in sub_trail_positions {
+                        if !found_trail_end_positions.contains(&pos) {found_trail_end_positions.push(pos)};
+                    }
                 }
             }
         }
     }
-    found_trails_count
+    found_trail_end_positions
 }
 
 fn main() {
@@ -51,8 +54,8 @@ fn main() {
     for trail_start_pos in trail_start_positions {
 
         let found_trails_count=find_trails_with_target_height(&topographic_map,trail_start_pos,9);
-        println!("Trail start at {},{} - found {}",trail_start_pos.0,trail_start_pos.1,found_trails_count);
-        found_trails_total+=found_trails_count;
+        println!("Trail start at {},{} - found {}",trail_start_pos.0,trail_start_pos.1,found_trails_count.len());
+        found_trails_total+=found_trails_count.len();
     }
 
     println!("Pt1 - Found trails total {}",found_trails_total);
