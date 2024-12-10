@@ -115,7 +115,7 @@ fn print_vec(vec_data : &Vec::<(i64,bool)>)
 }
 
 fn main() {
-    let content=fs::read_to_string("data/test_input").expect("Expected to read file");
+    let content=fs::read_to_string("data/input").expect("Expected to read file");
     let mut disk_map_pt1=create_disk_map(&content);
     let mut disk_map_pt2=disk_map_pt1.clone();
     print_vec(&disk_map_pt1);
