@@ -27,7 +27,7 @@ fn process_stone_single_iter(stone_value : i64) -> Vec<i64> {
         let (stone_string_left, stone_string_right) = stone_value_string.split_at(stone_value_string.len() / 2);
         return vec! {stone_string_left.parse::<i64>().unwrap(), stone_string_right.parse::<i64>().unwrap()};
     }
-    vec!{stone_value*2048}
+    vec!{stone_value*2024}
 }
 
 fn recurse_stone_iter(stone_value : i64, iter_count : i64, cached_values : &mut HashMap<i64,Vec<i64>>) -> i64 {
@@ -37,7 +37,7 @@ fn recurse_stone_iter(stone_value : i64, iter_count : i64, cached_values : &mut 
 
     // How to do rust recursive function mutable reference
     let expanded_values=cached_values.entry(stone_value).or_insert(process_stone_single_iter(stone_value)).clone();  // Have to clone here for local use
-    //println!("Cached expanded values size {}",expanded_values.len());
+    //println!("Cached expanded values for {stone_value} size {} contents {:?}",expanded_values.len(),expanded_values);
 
     if iter_count>0 { // At least one iteration remaining
         for expanded_stone_value in expanded_values {
@@ -46,6 +46,7 @@ fn recurse_stone_iter(stone_value : i64, iter_count : i64, cached_values : &mut 
         }
     } else {
         stone_count+=expanded_values.len() as i64; // End of iteration
+        //println!("Final contents {:?}",expanded_values);
     }
     stone_count
 }
@@ -73,9 +74,12 @@ fn main() {
 
     let mut expanded_stone_map : HashMap<i64,Vec<i64>> = HashMap::new();
     let mut stone_count=0;
+    let iter_count=25;
     for stone_value in pt2_stone_data.iter() {
-        println!("Processing value for {stone_value}");
-        stone_count+=recurse_stone_iter(*stone_value,25,&mut expanded_stone_map);
+
+        let stone_count_inc=recurse_stone_iter(*stone_value,iter_count-1,&mut expanded_stone_map);
+        println!("Processing value for {stone_value} stone_count {stone_count_inc}");
+        stone_count+=stone_count_inc;
     }
     println!("Pt2 - Stone count {}",stone_count);
 
