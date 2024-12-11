@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 use std::fs;
 
 fn process_stones(stone_data : &mut Vec<i64>) {
@@ -19,6 +20,35 @@ fn process_stones(stone_data : &mut Vec<i64>) {
     }
 }
 
+fn process_stone_single_iter(stone_value : i64) -> Vec<i64> {
+    if stone_value==0 {return vec!{1}};
+    if stone_value.to_string().len()%2==0 {
+        let stone_value_string = stone_value.to_string();
+        let (stone_string_left, stone_string_right) = stone_value_string.split_at(stone_value_string.len() / 2);
+        return vec! {stone_string_left.parse::<i64>().unwrap(), stone_string_right.parse::<i64>().unwrap()};
+    }
+    vec!{stone_value*2048}
+}
+
+fn recurse_stone_iter(stone_value : i64, iter_count : i64, cached_values : &mut HashMap<i64,Vec<i64>>) -> i64 {
+    let mut stone_count=0;
+
+    // We want a sum of all expanded values
+
+    // How to do rust recursive function mutable reference
+    let expanded_values=cached_values.entry(stone_value).or_insert(process_stone_single_iter(stone_value)).clone();  // Have to clone here for local use
+    if iter_count>0 {
+        for expanded_stone_value in expanded_values {
+            stone_count+=recurse_stone_iter(expanded_stone_value,iter_count-1,cached_values);
+        }
+    } else {
+        stone_count+=expanded_values.len() as i64; // End!
+    }
+    stone_count
+}
+
+
+
 
 fn main() {
     let content=fs::read_to_string("data/input").expect("Expected to read the file");
@@ -35,10 +65,12 @@ fn main() {
         process_stones(&mut stone_data)
     }
     println!("Pt1 - Stone count {}",stone_data.len());
-    for loop_index in 0..50 {
-        println!("Loop index {loop_index}");
-        process_stones(&mut stone_data)
+
+    let mut expanded_stone_map : HashMap<i64,Vec<i64>> = HashMap::new();
+    let mut stone_count=0;
+    for stone_value in stone_data.iter() {
+        stone_count+=recurse_stone_iter(*stone_value,3,&mut expanded_stone_map);
     }
-    println!("Pt2 - Stone count {}",stone_data.len());
+    println!("Pt2 - Stone count {}",stone_count);
 
 }
