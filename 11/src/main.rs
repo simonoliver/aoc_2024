@@ -37,12 +37,15 @@ fn recurse_stone_iter(stone_value : i64, iter_count : i64, cached_values : &mut 
 
     // How to do rust recursive function mutable reference
     let expanded_values=cached_values.entry(stone_value).or_insert(process_stone_single_iter(stone_value)).clone();  // Have to clone here for local use
-    if iter_count>0 {
+    //println!("Cached expanded values size {}",expanded_values.len());
+
+    if iter_count>0 { // At least one iteration remaining
         for expanded_stone_value in expanded_values {
+            // Add the sub of the expansion of each stone value
             stone_count+=recurse_stone_iter(expanded_stone_value,iter_count-1,cached_values);
         }
     } else {
-        stone_count+=expanded_values.len() as i64; // End!
+        stone_count+=expanded_values.len() as i64; // End of iteration
     }
     stone_count
 }
@@ -61,6 +64,8 @@ fn main() {
             value_string.parse::<i64>().unwrap()
         ).collect();
 
+    let pt2_stone_data=stone_data.clone();
+
     for _ in 0..25 {
         process_stones(&mut stone_data)
     }
@@ -68,8 +73,9 @@ fn main() {
 
     let mut expanded_stone_map : HashMap<i64,Vec<i64>> = HashMap::new();
     let mut stone_count=0;
-    for stone_value in stone_data.iter() {
-        stone_count+=recurse_stone_iter(*stone_value,3,&mut expanded_stone_map);
+    for stone_value in pt2_stone_data.iter() {
+        println!("Processing value for {stone_value}");
+        stone_count+=recurse_stone_iter(*stone_value,25,&mut expanded_stone_map);
     }
     println!("Pt2 - Stone count {}",stone_count);
 
