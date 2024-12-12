@@ -55,9 +55,14 @@ fn main() {
         println!("Line {:?}",line);
     }
     let found_regions=find_regions(&garden_data);
+    let mut pt1_total=0;
     for region in found_regions {
-        println!("Region size {}",region.len());
+        let region_size=region.len();
+        let region_borders=region.iter().fold(0,|acc,region_entry|acc+(4-region_entry.2));
+        println!("Region size {} borders {}",region_size,region_borders);
+        pt1_total+=region_size as i32*region_borders;
     }
+    println!("Pt1 Total {pt1_total}");
 
 }
 
