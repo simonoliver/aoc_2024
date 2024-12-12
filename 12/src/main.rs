@@ -44,7 +44,7 @@ fn find_regions(garden_data:&Vec<Vec<char>>) -> Vec<Vec<(i32,i32,i32)>> {
 }
 
 fn main() {
-    let content = fs::read_to_string("data/test_input").expect("Expected to read the file");
+    let content = fs::read_to_string("data/input").expect("Expected to read the file");
 
     let lines=content.split("\n").filter(|line|line.len()>0);
     let garden_data:Vec<Vec<char>>=lines.map(|line|{
