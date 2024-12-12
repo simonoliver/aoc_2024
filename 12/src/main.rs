@@ -50,10 +50,10 @@ fn side_count (side_bits:u8) -> u8
 {
     //[(1,0),(0,1),(-1,0),(0,-1)]; Right, down, left, top . RDLT
     let mut side_count:u8=0;
-    if side_bits & 0b0011 == 0b0001 {side_count+=1}; // top but not left, ??01,
-    if side_bits & 0b1001 == 0b1000 {side_count+=1}; // Right but not top (1?0?)
-    if side_bits & 0b1100 == 0b0100 {side_count+=1}; // Down but not right (01??)
-    if side_bits & 0b0110 == 0b0010 {side_count+=1}; // Left but not down (?01?)
+    if side_bits & 0b0011 == 0b0000 {side_count+=1}; // Nothing above and left
+    if side_bits & 0b1001 == 0b0000 {side_count+=1}; // Nothing right and top
+    if side_bits & 0b1100 == 0b0000 {side_count+=1}; // Nothing down and right
+    if side_bits & 0b0110 == 0b0000 {side_count+=1}; // Nothing left and down
     side_count
 }
 
