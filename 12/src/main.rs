@@ -30,7 +30,7 @@ fn add_region_neighbours_at_location(garden_data:&Vec<Vec<char>>, region_locatio
         if test_location.0>=0 && test_location.0<(garden_data[0].len() as i32) && test_location.1>=0 && test_location.1<(garden_data.len() as i32) { // Bounds check
             let location_index=test_location.0+test_location.1*(garden_data[0].len() as i32);
             if garden_data[test_location.1 as usize][test_location.0 as usize]==garden_data[region_location.1 as usize][region_location.0 as usize] { // Char match
-                neighbors_bits|=1<<direction_index; // Add neighbor bit
+                neighbors_bits|=1<<(7-direction_index); // Add neighbor bit
             }
         }
     }
@@ -105,7 +105,7 @@ fn main() {
     let region1=&found_regions[0];
     for location in region1 {
         let sides=side_count(location.3);
-        println!("Location {},{} side count {}",location.0,location.1,sides);
+        println!("Location {},{} {:b} side count {}",location.0,location.1,location.3,sides);
     }
     println!("Pt1 Total {pt1_total}");
     println!("Pt2 Total {pt2_total}");
