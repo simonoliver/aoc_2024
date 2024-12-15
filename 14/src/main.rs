@@ -1,6 +1,4 @@
 use std::fs;
-use std::ops::Add;
-use regex;
 use regex::Regex;
 
 fn process_movement (location_data: &mut Vec<((i64,i64),(i64,i64))>,area_size:(i64,i64), count : i64) {
@@ -33,7 +31,7 @@ fn count_robots(location_data: &Vec<((i64, i64), (i64, i64))>, area_size: (i64, 
     location_data.iter().fold(vec!(0;4),
         |mut acc,location| {
             let quadrant=get_quadrant_index((location.0.0,location.0.1),area_size);
-            if (quadrant>=0) {acc[quadrant as usize]+=1;}
+            if quadrant>=0 {acc[quadrant as usize]+=1;}
             acc
             //if quadrant<0 {acc}
             //else acc[quadrant]+=1;acc
@@ -45,10 +43,10 @@ fn count_robots(location_data: &Vec<((i64, i64), (i64, i64))>, area_size: (i64, 
 
 fn print_grid(location_data: &Vec<((i64,i64),(i64,i64))>,area_size:(i64,i64)) {
     let mut grid:Vec<Vec<i64>>=Vec::new();
-    for row in 0..area_size.1 {
+    for _ in 0..area_size.1 {
         grid.push(vec!(0;area_size.0 as usize));
     }
-    for (index,location_data) in location_data.iter().enumerate() {
+    for (_,location_data) in location_data.iter().enumerate() {
        let location=location_data.0;
         grid[location.1 as usize][location.0 as usize]+=1; // Append count
     }
@@ -78,8 +76,8 @@ fn main() {
     println!("Data size {}",location_data.len());
 
     process_movement(&mut location_data,area_size,100);
-    println!("Pt1 - {}",count_robots(&location_data,area_size));
     print_grid(&location_data,area_size);
+    println!("Pt1 - {}",count_robots(&location_data,area_size));
 }
 
 
