@@ -27,11 +27,51 @@ fn parse_map(lines:&Vec<&str>) -> (Vec<Vec<GridEntryType>>,(i64,i64)) {
     (grid,start_pos)
 }
 
-fn print_map(grid:&Vec<Vec<GridEntryType>>,agent_pos:(i64,i64)) {
+// Find spaces in direction
+fn find_movable_count_in_direction(map: &mut Vec<Vec<GridEntryType>>,pos:(i64,i64),direction_step:(i64,i64)) -> (bool,i64)
+{
+    let mut count=0;
+    let grid_size=(map[0].len() as i64,map.len() as i64);
+    loop
+    {
+        count+=1;
+        let test_pos=(pos.0+direction_step.0*count,pos.1+direction_step.1*count);
+        if test_pos.0<0 || test_pos.0>=grid_size.0 || test_pos.1<0 || test_pos.1>=grid_size.1 { // Bounds check
+            return (false,0);
+        }
+        match map[test_pos.1 as usize][test_pos.0 as usize] {
+            GridEntryType::Block =>  {return (false,0)},
+            GridEntryType::Box => {},
+            GridEntryType::Empty => {return (true,count)},
+        }
+    }
+}
+
+fn process_direction(map: &mut Vec<Vec<GridEntryType>>, agent_pos: &mut (i64, i64), direction: u8) {
+    let direction_step=DIRECTION_MOVEMENT[direction as usize];
+    let (can_move,step_count) =find_movable_count_in_direction(map,*agent_pos,direction_step);
+    if can_move {
+        // Shift blocks as needed
+        for step_index in 0..step_count-1 {
+            let step_index=step_count-step_index;
+            let to_pos=(agent_pos.0+direction_step.0*step_index,agent_pos.1+direction_step.1*step_index);
+            let from_pos=(agent_pos.0+direction_step.0*(step_index-1),agent_pos.1+direction_step.1*(step_index-1));
+            //let copy_val=(&map[from_pos.1 as usize][from_pos.0 as usize]);
+            map[to_pos.1 as usize][to_pos.0 as usize]=GridEntryType::Box;
+            map[from_pos.1 as usize][from_pos.0 as usize]=GridEntryType::Empty;
+        }
+        // move
+        agent_pos.0 += direction_step.0;
+        agent_pos.1 += direction_step.1;
+    }
+}
+
+
+fn print_map(grid:&Vec<Vec<GridEntryType>>,agent_pos:&(i64,i64)) {
     for (row_index,grid_line) in grid.iter().enumerate() {
         let mut string_line=String::new();
         for (column_index,entry) in grid_line.iter().enumerate() {
-            if (column_index as i64,row_index as i64)==agent_pos {
+            if (column_index as i64,row_index as i64)==*agent_pos {
                 string_line.push('@');
             } else {
                 match entry {
@@ -74,12 +114,18 @@ fn main() {
         if line_index<section_split_index.0 {map_lines.push(line)}
         else if line_index>section_split_index.0 {directions_lines.push(line)};
     }
-    let (map,start_pos)=parse_map(&map_lines);
-    let directions=parse_directions(&directions_lines);
-    println!("Line split at line {} map lines {} directions {} start pos {},{}",section_split_index.0,map.len(),directions.len(),start_pos.0,start_pos.1);
+    let (mut map,mut agent_pos)=parse_map(&map_lines);
+    let agent_directions_sequence=parse_directions(&directions_lines);
+    println!("Line split at line {} map lines {} directions {} start pos {},{}",section_split_index.0,map.len(),agent_directions_sequence.len(),agent_pos.0,agent_pos.1);
 
-    print_map(&map,start_pos);
+    print_map(&map,&agent_pos);
+
+    for direction in agent_directions_sequence {
+        process_direction(&mut map,&mut agent_pos,direction);
+    }
+    print_map(&map,&agent_pos);
 }
+
 
 
 
