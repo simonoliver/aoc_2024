@@ -27,6 +27,17 @@ fn parse_map(lines:&Vec<&str>) -> (Vec<Vec<GridEntryType>>,(i64,i64)) {
     (grid,start_pos)
 }
 
+fn parse_directions(lines:&Vec<&str>) -> Vec<u8> {
+    let mut directions:Vec<u8>=Vec::new();
+    for line in lines {
+        for char in line.chars() {
+            let char_option= DIRECTION_CHARS.iter().position(|test_char| *test_char==char);
+            if let Some(index) = char_option {directions.push(index as u8)}
+        }
+    }
+    directions
+}
+
 fn main() {
     let content = fs::read_to_string("data/test_input").expect("Expected to read the file");
     let lines=content.split("\n");
@@ -46,8 +57,8 @@ fn main() {
         else if line_index>section_split_index.0 {directions_lines.push(line)};
     }
     let (map,start_pos)=parse_map(&map_lines);
-
-    println!("Line split at line {} map lines {} directions {} start pos {},{}",section_split_index.0,map.len(),directions_lines.len(),start_pos.0,start_pos.1);
+    let directions=parse_directions(&directions_lines);
+    println!("Line split at line {} map lines {} directions {} start pos {},{}",section_split_index.0,map.len(),directions.len(),start_pos.0,start_pos.1);
 }
 
 
