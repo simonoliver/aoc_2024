@@ -27,6 +27,24 @@ fn parse_map(lines:&Vec<&str>) -> (Vec<Vec<GridEntryType>>,(i64,i64)) {
     (grid,start_pos)
 }
 
+fn print_map(grid:&Vec<Vec<GridEntryType>>,agent_pos:(i64,i64)) {
+    for (row_index,grid_line) in grid.iter().enumerate() {
+        let mut string_line=String::new();
+        for (column_index,entry) in grid_line.iter().enumerate() {
+            if (column_index as i64,row_index as i64)==agent_pos {
+                string_line.push('@');
+            } else {
+                match entry {
+                    GridEntryType::Empty => { string_line.push('.'); }
+                    GridEntryType::Block => { string_line.push('#'); }
+                    GridEntryType::Box => { string_line.push('O'); }
+                }
+            }
+        }
+        println!("{string_line}");
+    }
+}
+
 fn parse_directions(lines:&Vec<&str>) -> Vec<u8> {
     let mut directions:Vec<u8>=Vec::new();
     for line in lines {
@@ -59,6 +77,8 @@ fn main() {
     let (map,start_pos)=parse_map(&map_lines);
     let directions=parse_directions(&directions_lines);
     println!("Line split at line {} map lines {} directions {} start pos {},{}",section_split_index.0,map.len(),directions.len(),start_pos.0,start_pos.1);
+
+    print_map(&map,start_pos);
 }
 
 
