@@ -32,8 +32,7 @@ fn find_movable_count_in_direction(map: &mut Vec<Vec<GridEntryType>>,pos:(i64,i6
 {
     let mut count=0;
     let grid_size=(map[0].len() as i64,map.len() as i64);
-    loop
-    {
+    loop {
         count+=1;
         let test_pos=(pos.0+direction_step.0*count,pos.1+direction_step.1*count);
         if test_pos.0<0 || test_pos.0>=grid_size.0 || test_pos.1<0 || test_pos.1>=grid_size.1 { // Bounds check
@@ -64,6 +63,16 @@ fn process_direction(map: &mut Vec<Vec<GridEntryType>>, agent_pos: &mut (i64, i6
         agent_pos.0 += direction_step.0;
         agent_pos.1 += direction_step.1;
     }
+}
+
+fn calculate_coordinates(grid:&Vec<Vec<GridEntryType>>) -> i64 {
+    let mut coord_total:i64=0;
+    for (row_index,row) in grid.iter().enumerate() {
+        for (column_index,entry_value) in row.iter().enumerate() {
+            if let GridEntryType::Box = entry_value {coord_total+=row_index as i64*100+column_index as i64;}
+        }
+    }
+    coord_total
 }
 
 
@@ -109,14 +118,13 @@ fn main() {
     );
     let mut map_lines:Vec<&str>=Vec::new();
     let mut directions_lines:Vec<&str>=Vec::new();
-    println!("Line split at line {}",section_split_index.0);
+
     for (line_index,line) in lines.enumerate() {
         if line_index<section_split_index.0 {map_lines.push(line)}
         else if line_index>section_split_index.0 {directions_lines.push(line)};
     }
     let (mut map,mut agent_pos)=parse_map(&map_lines);
     let agent_directions_sequence=parse_directions(&directions_lines);
-    println!("Line split at line {} map lines {} directions {} start pos {},{}",section_split_index.0,map.len(),agent_directions_sequence.len(),agent_pos.0,agent_pos.1);
 
     print_map(&map,&agent_pos);
 
@@ -124,6 +132,8 @@ fn main() {
         process_direction(&mut map,&mut agent_pos,direction);
     }
     print_map(&map,&agent_pos);
+    
+    println!("Pt1 - {}",calculate_coordinates(&map));
 }
 
 
