@@ -1,5 +1,7 @@
 use std::fs;
 use regex::Regex;
+use std::io;
+use std::io::prelude::*;
 
 fn process_movement (location_data: &mut Vec<((i64,i64),(i64,i64))>,area_size:(i64,i64), count : i64) {
     for _ in 0..count { // Iteration
@@ -62,7 +64,6 @@ fn print_grid(location_data: &Vec<((i64,i64),(i64,i64))>,area_size:(i64,i64)) {
         println!("{string_line}");
     }
 }
-
 fn main() {
     let content = fs::read_to_string("data/input").expect("Expected to read the file");
     let regex=Regex::new(r"p=(-*[0-9]+),(-*[0-9]+) v=(-*[0-9]+),(-*[0-9]+)").unwrap();
@@ -75,9 +76,23 @@ fn main() {
         }).collect();
     println!("Data size {}",location_data.len());
 
-    process_movement(&mut location_data,area_size,100);
-    print_grid(&location_data,area_size);
-    println!("Pt1 - {}",count_robots(&location_data,area_size));
+    let mut count=0;
+    let mut min_safety_value:i64=1000000000000;
+    let mut min_safety_index:i64=0;
+    while count<10000 {
+        process_movement(&mut location_data, area_size, 1);
+        //print_grid(&location_data, area_size);
+        count+=1;
+
+        let safety_val=count_robots(&location_data,area_size);
+        if safety_val<min_safety_value {
+            print_grid(&location_data, area_size);
+            min_safety_value=safety_val;
+            min_safety_index=count;
+            println!("New lowest val found at {count}");
+        }
+    }
+    //println!("Pt1 - {}",count_robots(&location_data,area_size));
 }
 
 
