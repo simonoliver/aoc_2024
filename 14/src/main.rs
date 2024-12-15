@@ -64,9 +64,9 @@ fn print_grid(location_data: &Vec<((i64,i64),(i64,i64))>,area_size:(i64,i64)) {
 }
 
 fn main() {
-    let content = fs::read_to_string("data/test_input").expect("Expected to read the file");
+    let content = fs::read_to_string("data/input").expect("Expected to read the file");
     let regex=Regex::new(r"p=(-*[0-9]+),(-*[0-9]+) v=(-*[0-9]+),(-*[0-9]+)").unwrap();
-    let area_size:(i64,i64)= (11,7); //(101,103); //
+    let area_size:(i64,i64)=(101,103); //
     let mut location_data:Vec<((i64,i64),(i64,i64))>= regex.captures_iter(&content)
         .filter(|capture|capture.get(0).unwrap().as_str().len()>0)
         .map(|capture| {
