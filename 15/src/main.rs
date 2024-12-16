@@ -1,9 +1,12 @@
 use std::fs;
 
+#[derive(Copy,Clone)]
 enum GridEntryType {
     Empty,
     Block,
-    Box
+    Box,
+    LargeBoxLeft,
+    LargeBoxRight
 }
 
 const DIRECTION_CHARS:[char;4]=['>','v','<','^'];
@@ -27,6 +30,24 @@ fn parse_map(lines:&Vec<&str>) -> (Vec<Vec<GridEntryType>>,(i64,i64)) {
     (grid,start_pos)
 }
 
+fn parse_map_wide(lines:&Vec<&str>) -> (Vec<Vec<GridEntryType>>,(i64,i64)) {
+    let mut grid:Vec<Vec<GridEntryType>> = Vec::new();
+    let mut start_pos:(i64,i64)=(0,0);
+    for line in lines {
+        grid.push(line.chars().fold(Vec::new(),|mut acc,char_entry|{
+            acc.extend( // Extend rather than push
+                match char_entry {
+                    '#' => vec!{GridEntryType::Block,GridEntryType::Block},
+                    'O' => vec!{GridEntryType::LargeBoxLeft,GridEntryType::LargeBoxRight},
+                    '@' => {start_pos=(acc.len() as i64,grid.len() as i64);vec!{GridEntryType::Empty,GridEntryType::Empty}},
+                    _ => vec!{GridEntryType::Empty,GridEntryType::Empty}
+                });
+            acc })
+        )
+    };
+    (grid,start_pos)
+}
+
 // Find spaces in direction
 fn find_movable_count_in_direction(map: &mut Vec<Vec<GridEntryType>>,pos:(i64,i64),direction_step:(i64,i64)) -> (bool,i64)
 {
@@ -42,8 +63,81 @@ fn find_movable_count_in_direction(map: &mut Vec<Vec<GridEntryType>>,pos:(i64,i6
             GridEntryType::Block =>  {return (false,0)},
             GridEntryType::Box => {},
             GridEntryType::Empty => {return (true,count)},
+            _ => {}
         }
     }
+}
+
+
+fn test_bounds(map: &Vec<Vec<GridEntryType>>,test_pos: (i64, i64)) -> bool
+{
+    let grid_size=(map[0].len() as i64,map.len() as i64);
+    if test_pos.0<0 || test_pos.0>=grid_size.0 || test_pos.1<0 || test_pos.1>=grid_size.1 {
+        return false;
+    }
+    true
+}
+
+fn get_movable_blocks_in_direction(map: &Vec<Vec<GridEntryType>>,test_pos: (i64, i64),direction: (i64, i64),movable_block_positions:&mut Vec<(i64,i64)>) {
+    if !test_bounds(map,test_pos) {return;}
+
+    let (mut add_pos,mut extra_pos)=match map[test_pos.1 as usize][test_pos.0 as usize] {
+        GridEntryType::LargeBoxLeft => {(true,(test_pos.0+1,test_pos.1))},
+        GridEntryType::LargeBoxRight => {(true,(test_pos.0-1,test_pos.1))},
+        _ => {(false,(0,0))},
+    };
+    if add_pos {
+        if !movable_block_positions.contains(&test_pos) {
+            movable_block_positions.push(test_pos);
+            get_movable_blocks_in_direction(map,(test_pos.0+direction.0,test_pos.1+direction.1),direction,movable_block_positions);
+        }
+        if !movable_block_positions.contains(&extra_pos) {
+            movable_block_positions.push(extra_pos);
+            get_movable_blocks_in_direction(map,(extra_pos.0+direction.0,extra_pos.1+direction.1),direction,movable_block_positions);
+        }
+    }
+       // movable_block_positions.extend(vec!{test_pos,extra_pos});
+}
+
+fn try_movable_blocks_can_move_in_direction(map: &mut Vec<Vec<GridEntryType>>,movable_block_positions:&Vec<(i64,i64)>,direction: (i64, i64)) -> bool {
+    // Test all can move
+    for block_pos in movable_block_positions {
+        let move_to_pos=(block_pos.0+direction.0,block_pos.1+direction.1);
+        if !test_bounds(map,move_to_pos) {return false;}
+        match map[move_to_pos.1 as usize][move_to_pos.0 as usize] {
+            GridEntryType::Block=> {return false;}
+            _ => {}
+        }
+    }
+    // Can move so process each
+    for block_pos in movable_block_positions {
+        let move_to_pos = (block_pos.0 + direction.0, block_pos.1 + direction.1);
+        let swap_src=map[block_pos.1 as usize][block_pos.0 as usize];
+        let swap_dst=map[move_to_pos.1 as usize][move_to_pos.0 as usize];
+        map[move_to_pos.1 as usize][move_to_pos.0 as usize]=swap_src;
+        map[block_pos.1 as usize][block_pos.0 as usize]=swap_dst;
+       // std::mem::swap(swap_src,swap_dst);
+    }
+    true
+}
+
+fn process_direction_wide(map: &mut Vec<Vec<GridEntryType>>, agent_pos: &mut (i64, i64), direction: u8)
+{
+    let direction_step=DIRECTION_MOVEMENT[direction as usize];
+    let mut movable_block_positions:Vec<(i64,i64)>=Vec::new();
+    get_movable_blocks_in_direction(map,(agent_pos.0+direction_step.0,agent_pos.1+direction_step.1),direction_step,&mut movable_block_positions);
+    let mut move_player=false;
+    let move_player_step=(agent_pos.0+direction_step.0,agent_pos.1+direction_step.1);
+    if movable_block_positions.len()==0 {
+        move_player=match map[move_player_step.1 as usize][move_player_step.0 as usize] {
+            GridEntryType::Empty => true,
+            _ => false
+        }
+    }
+    else {
+        move_player=try_movable_blocks_can_move_in_direction(map,&mut movable_block_positions,direction_step);
+    }
+    if move_player {agent_pos.0=move_player_step.0;agent_pos.1=move_player_step.1;}
 }
 
 fn process_direction(map: &mut Vec<Vec<GridEntryType>>, agent_pos: &mut (i64, i64), direction: u8) {
@@ -75,7 +169,6 @@ fn calculate_coordinates(grid:&Vec<Vec<GridEntryType>>) -> i64 {
     coord_total
 }
 
-
 fn print_map(grid:&Vec<Vec<GridEntryType>>,agent_pos:&(i64,i64)) {
     for (row_index,grid_line) in grid.iter().enumerate() {
         let mut string_line=String::new();
@@ -86,7 +179,9 @@ fn print_map(grid:&Vec<Vec<GridEntryType>>,agent_pos:&(i64,i64)) {
                 match entry {
                     GridEntryType::Empty => { string_line.push('.'); }
                     GridEntryType::Block => { string_line.push('#'); }
-                    GridEntryType::Box => { string_line.push('O'); }
+                    GridEntryType::Box => { string_line.push('O'); },
+                    GridEntryType::LargeBoxLeft => { string_line.push('[');},
+                    GridEntryType::LargeBoxRight => { string_line.push(']');},
                 }
             }
         }
@@ -124,18 +219,22 @@ fn main() {
         else if line_index>section_split_index.0 {directions_lines.push(line)};
     }
     let (mut map,mut agent_pos)=parse_map(&map_lines);
+    let (mut map_wide,mut agent_pos_wide)=parse_map_wide(&map_lines);
     let agent_directions_sequence=parse_directions(&directions_lines);
 
     print_map(&map,&agent_pos);
 
-    for direction in agent_directions_sequence {
-        process_direction(&mut map,&mut agent_pos,direction);
+    for direction in &agent_directions_sequence {
+        process_direction(&mut map,&mut agent_pos,*direction);
     }
     print_map(&map,&agent_pos);
-    
+
     println!("Pt1 - {}",calculate_coordinates(&map));
+
+    print_map(&map_wide,&agent_pos_wide);
+    for direction in &agent_directions_sequence {
+        process_direction_wide(&mut map_wide,&mut agent_pos_wide,*direction);
+    }
+    print_map(&map_wide,&agent_pos_wide);
+    println!("Pt2 - {}",calculate_coordinates(&map_wide));
 }
-
-
-
-
