@@ -1,29 +1,72 @@
+use std::collections::HashMap;
 use std::fs;
 use grid::*; //https://docs.rs/grid/latest/grid/
+use pathfinding::prelude::astar; // https://docs.rs/pathfinding/latest/pathfinding/directed/astar/fn.astar.html
+
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd)]
+struct GridPos(i32,i32,u8); // x,y,rotation
+const DIRECTIONS:[(i32,i32);4]=[(1,0),(0,1),(-1,0),(0,-1)];
+const DIRECTION_SYMBOLS:[char;4]=['>','v','<','^'];
+impl GridPos {
+    fn distance(&self, other: &GridPos) -> u32 {
+        (self.0.abs_diff(other.0) + self.1.abs_diff(other.1)) as u32 // Manhattan distance
+    }
+    fn successors(&self, grid: &Grid<GridEntry>) -> Vec<(GridPos, u32)> {
+        // Add all valid neighbors as successors
+        let grid_size=grid.size();
+        let mut valid_successors: Vec<(GridPos, u32)> =Vec::new();
+        for (direction_index,direction) in DIRECTIONS.iter().enumerate() {
+            let test_pos=(self.0+direction.0,self.1+direction.1);
+            if test_pos.0>=0 && test_pos.0<grid_size.0 as i32 && test_pos.1>=0 && test_pos.1<grid_size.1 as i32 {
+                match grid.get(test_pos.1,test_pos.0) {
+                    None => {}
+                    Some(entry) => { match (entry) {
+                        GridEntry::Block => {},
+                        _ => {valid_successors.push((GridPos(test_pos.0,test_pos.1,direction_index as u8),if self.2==direction_index as u8 {1} else {1001}));} // Cost is 1001 if turning
+                    };}
+                };
+            }
+        }
+        valid_successors
+    }
+}
+
 
 enum GridEntry {
     Empty, Block, StartPosition, EndPosition
 }
-fn print_map(map:Grid<GridEntry>) {
-    for row in map.iter_rows() {
-        println!("{}",row.fold(String::new(),|mut acc, entry| {
-            match entry {
-                GridEntry::Empty => { acc.push('.'); }
-                GridEntry::Block => { acc.push('#'); }
-                GridEntry::StartPosition => { acc.push('S'); }
-                GridEntry::EndPosition => { acc.push('E'); }
-            };
+fn print_map(map:&Grid<GridEntry>,Path:&Vec<GridPos>) {
+    let mut map_directions:HashMap<(i32,i32),char>=HashMap::new();
+    for path_entry in Path {
+        map_directions.entry((path_entry.0,path_entry.1)).or_insert(DIRECTION_SYMBOLS[path_entry.2 as usize]);
+    }
+    for (row_index,row) in map.iter_rows().enumerate() {
+        let mut char_index=0;
+        let row_string=row.fold(String::new(),|mut acc, entry| {
+            if map_directions.contains_key(&(char_index,row_index as i32)) {
+                acc.push(map_directions[&(char_index,row_index as i32)]);
+            }
+            else {
+                match entry {
+                    GridEntry::Empty => { acc.push('.'); }
+                    GridEntry::Block => { acc.push('#'); }
+                    GridEntry::StartPosition => { acc.push('S'); }
+                    GridEntry::EndPosition => { acc.push('E'); }
+                };
+            }
+            char_index+=1;
             acc
-        }));
+        });
+        println!("{}",row_string);
     }
 }
 
-fn pos_from_index(index:i32,grid_width:i32) -> (i32,i32) {
-    (index%grid_width, ((index as f64/grid_width as f64).floor()) as i32)
+fn pos_from_index(index:i32,grid_width:i32) -> GridPos {
+    GridPos(index%grid_width, (index as f64/grid_width as f64).floor() as i32, 0)
 }
 
-fn parse_map(content:&str,line_length:usize) -> (Grid<GridEntry>,(i32,i32),(i32,i32)) {
-    let (mut start_pos,mut end_pos)=((0,0),(0,0));
+fn parse_map(content:&str,line_length:usize) -> (Grid<GridEntry>,GridPos,GridPos) {
+    let (mut start_pos,mut end_pos)=(GridPos(0,0,0),GridPos(0,0,0));
     let entries:Vec<GridEntry>=content.chars().fold(Vec::new(),  |mut acc,entry_char| {match entry_char {
         '#' => acc.push(GridEntry::Block),
         'S' => {start_pos=pos_from_index(acc.len() as i32,line_length as i32);acc.push(GridEntry::StartPosition)},
@@ -39,5 +82,17 @@ fn main() {
     let lines:Vec<&str>=content.split("\n").filter(|line|line.len()>0).collect();
     let line_length=lines[0].len();
     let (grid,start_pos,end_pos)=parse_map(&content,line_length);
-    print_map(grid);
+    print_map(&grid,&Vec::new());
+    let result = astar(&start_pos,
+                       |test_pos| test_pos.successors(&grid),
+                       |test_pos| test_pos.distance(&end_pos) / 3,
+                       |test_pos| *test_pos == end_pos);
+
+    match result {
+        None => {println!("Unable to find path")},
+        Some(path_result) => {
+            println!("Found path, length {}, cost {}",path_result.0.len(),path_result.1);
+            print_map(&grid,&path_result.0);
+        }
+    }
 }
