@@ -2,11 +2,12 @@ use std::collections::HashMap;
 use std::fs;
 use grid::*; //https://docs.rs/grid/latest/grid/
 use pathfinding::prelude::astar_bag; // https://docs.rs/pathfinding/latest/pathfinding/directed/astar/fn.astar.html
+use colored::*;
 
 #[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd)]
 struct GridPos(i32,i32,u8); // x,y,rotation
 const DIRECTIONS:[(i32,i32);4]=[(1,0),(0,1),(-1,0),(0,-1)];
-const DIRECTION_SYMBOLS:[char;4]=['>','v','<','^'];
+const DIRECTION_SYMBOLS:[char;4]=['→','↓','←','↑'];
 impl GridPos {
     fn distance(&self, other: &GridPos) -> u32 {
         (self.0.abs_diff(other.0) + self.1.abs_diff(other.1)) as u32 // Manhattan distance
@@ -44,12 +45,12 @@ fn print_map(map:&Grid<GridEntry>, path:&Vec<GridPos>) {
         let mut char_index=0;
         let row_string=row.fold(String::new(),|mut acc, entry| {
             if map_directions.contains_key(&(char_index,row_index as i32)) {
-                acc.push(map_directions[&(char_index,row_index as i32)]);
+                acc.push_str(map_directions[&(char_index,row_index as i32)].to_string().green().to_string().as_str());
             }
             else {
                 match entry {
-                    GridEntry::Empty => { acc.push('.'); }
-                    GridEntry::Block => { acc.push('#'); }
+                    GridEntry::Empty => { acc.push_str(".".blue().to_string().as_str()); }
+                    GridEntry::Block => { acc.push_str("▓".bright_black().to_string().as_str()); }
                     GridEntry::StartPosition => { acc.push('S'); }
                     GridEntry::EndPosition => { acc.push('E'); }
                 };
