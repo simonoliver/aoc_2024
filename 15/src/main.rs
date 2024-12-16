@@ -98,7 +98,6 @@ fn get_movable_blocks_in_direction(map: &Vec<Vec<GridEntryType>>,test_pos: (i64,
             get_movable_blocks_in_direction(map,(extra_pos.0+direction.0,extra_pos.1+direction.1),direction,movable_block_positions);
         }
     }
-       // movable_block_positions.extend(vec!{test_pos,extra_pos});
 }
 
 fn try_movable_blocks_can_move_in_direction(map: &mut Vec<Vec<GridEntryType>>,movable_block_positions:&Vec<(i64,i64)>,direction: (i64, i64)) -> bool {
@@ -116,30 +115,15 @@ fn try_movable_blocks_can_move_in_direction(map: &mut Vec<Vec<GridEntryType>>,mo
         }
         write_data.push((map[block_pos.1 as usize][block_pos.0 as usize],*block_pos));
     }
-    // Erase first
+    // Erase all first
     for write_src_pos in &write_data {
         map[write_src_pos.1.1 as usize][write_src_pos.1.0 as usize] = GridEntryType::Empty; // erase old position
     }
     // Then write
     for write_src_pos in &write_data {
         let move_to_pos = (write_src_pos.1.0 + direction.0, write_src_pos.1.1 + direction.1);
-        println!("Moving {:?} from {},{} to {},{}",write_src_pos.0,write_src_pos.1.0,write_src_pos.1.1,move_to_pos.0,move_to_pos.1);
-
         map[move_to_pos.1 as usize][move_to_pos.0 as usize]=write_src_pos.0; // Write new data
-
     }
-
-    /*
-    // Can move so process each
-    for block_pos in movable_block_positions {
-        let move_to_pos = (block_pos.0 + direction.0, block_pos.1 + direction.1);
-        let swap_src=map[block_pos.1 as usize][block_pos.0 as usize];
-        let swap_dst=map[move_to_pos.1 as usize][move_to_pos.0 as usize];
-        map[move_to_pos.1 as usize][move_to_pos.0 as usize]=swap_src;
-        map[block_pos.1 as usize][block_pos.0 as usize]=swap_dst;
-       // std::mem::swap(swap_src,swap_dst);
-    }
-     */
     true
 }
 
@@ -185,7 +169,11 @@ fn calculate_coordinates(grid:&Vec<Vec<GridEntryType>>) -> i64 {
     let mut coord_total:i64=0;
     for (row_index,row) in grid.iter().enumerate() {
         for (column_index,entry_value) in row.iter().enumerate() {
-            if let GridEntryType::Box = entry_value {coord_total+=row_index as i64*100+column_index as i64;}
+            match entry_value
+            {
+                GridEntryType::Box | GridEntryType::LargeBoxLeft=>  {coord_total+=row_index as i64*100+column_index as i64;}
+                _ => {}
+            }
         }
     }
     coord_total
@@ -262,15 +250,11 @@ fn main() {
         process_direction(&mut map,&mut agent_pos,*direction);
     }
     print_map(&map,&agent_pos);
-
     println!("Pt1 - {}",calculate_coordinates(&map));
 
     print_map(&map_wide,&agent_pos_wide);
     for direction in &agent_directions_sequence {
         process_direction_wide(&mut map_wide,&mut agent_pos_wide,*direction);
-
-        //print_map(&map_wide,&agent_pos_wide);
-        //pause();
     }
     print_map(&map_wide,&agent_pos_wide);
     println!("Pt2 - {}",calculate_coordinates(&map_wide));
