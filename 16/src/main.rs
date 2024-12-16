@@ -6,16 +6,15 @@ enum GridEntry {
 }
 fn print_map(map:Grid<GridEntry>) {
     for row in map.iter_rows() {
-        let mut string_line=String::new();
-        for entry in row {
+        println!("{}",row.fold(String::new(),|mut acc, entry| {
             match entry {
-                GridEntry::Empty => { string_line.push('.'); }
-                GridEntry::Block => { string_line.push('#'); }
-                GridEntry::StartPosition => { string_line.push('S'); }
-                GridEntry::EndPosition => { string_line.push('E'); }
-            }
-        }
-        println!("{string_line}");
+                GridEntry::Empty => { acc.push('.'); }
+                GridEntry::Block => { acc.push('#'); }
+                GridEntry::StartPosition => { acc.push('S'); }
+                GridEntry::EndPosition => { acc.push('E'); }
+            };
+            acc
+        }));
     }
 }
 
