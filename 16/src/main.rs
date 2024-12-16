@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 use std::fs;
 use grid::*; //https://docs.rs/grid/latest/grid/
-use pathfinding::prelude::astar; // https://docs.rs/pathfinding/latest/pathfinding/directed/astar/fn.astar.html
+use pathfinding::prelude::astar_bag; // https://docs.rs/pathfinding/latest/pathfinding/directed/astar/fn.astar.html
 
 #[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd)]
 struct GridPos(i32,i32,u8); // x,y,rotation
@@ -20,7 +20,7 @@ impl GridPos {
             if test_pos.0>=0 && test_pos.0<grid_size.0 as i32 && test_pos.1>=0 && test_pos.1<grid_size.1 as i32 {
                 match grid.get(test_pos.1,test_pos.0) {
                     None => {}
-                    Some(entry) => { match (entry) {
+                    Some(entry) => { match entry {
                         GridEntry::Block => {},
                         _ => {valid_successors.push((GridPos(test_pos.0,test_pos.1,direction_index as u8),if self.2==direction_index as u8 {1} else {1001}));} // Cost is 1001 if turning
                     };}
@@ -35,9 +35,9 @@ impl GridPos {
 enum GridEntry {
     Empty, Block, StartPosition, EndPosition
 }
-fn print_map(map:&Grid<GridEntry>,Path:&Vec<GridPos>) {
+fn print_map(map:&Grid<GridEntry>, path:&Vec<GridPos>) {
     let mut map_directions:HashMap<(i32,i32),char>=HashMap::new();
-    for path_entry in Path {
+    for path_entry in path {
         map_directions.entry((path_entry.0,path_entry.1)).or_insert(DIRECTION_SYMBOLS[path_entry.2 as usize]);
     }
     for (row_index,row) in map.iter_rows().enumerate() {
@@ -78,12 +78,12 @@ fn parse_map(content:&str,line_length:usize) -> (Grid<GridEntry>,GridPos,GridPos
 }
 
 fn main() {
-    let content = fs::read_to_string("data/test_input").expect("Expected to read the file");
+    let content = fs::read_to_string("data/input").expect("Expected to read the file");
     let lines:Vec<&str>=content.split("\n").filter(|line|line.len()>0).collect();
     let line_length=lines[0].len();
     let (grid,start_pos,end_pos)=parse_map(&content,line_length);
     print_map(&grid,&Vec::new());
-    let result = astar(&start_pos,
+    let result = astar_bag(&start_pos,
                        |test_pos| test_pos.successors(&grid),
                        |test_pos| test_pos.distance(&end_pos) / 3,
                        |test_pos| (test_pos.0,test_pos.1) == (end_pos.0,end_pos.1));
@@ -91,8 +91,15 @@ fn main() {
     match result {
         None => {println!("Unable to find path")},
         Some(path_result) => {
-            println!("Found path, length {}, cost {}",path_result.0.len(),path_result.1);
-            print_map(&grid,&path_result.0);
+            let mut occupied_map:HashMap<(i32,i32),bool>=HashMap::new();
+            for (index,solution) in path_result.0.enumerate() {
+                println!("Solution {} : Path length {}, cost {}",index,solution.len(),path_result.1);
+                print_map(&grid,&solution);
+                for solution_pos in solution {
+                    occupied_map.entry((solution_pos.0,solution_pos.1)).or_insert(true);
+                }
+            }
+            println!("Pt2 - occupied locations {}",occupied_map.len());
         }
     }
 }
