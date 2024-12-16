@@ -223,7 +223,7 @@ fn pause() {
 }
 
 fn main() {
-    let content = fs::read_to_string("data/test_input").expect("Expected to read the file");
+    let content = fs::read_to_string("data/input").expect("Expected to read the file");
     let lines=content.split("\n");
     let section_split_index=lines.clone().fold((0,false),|mut acc,line|
         {

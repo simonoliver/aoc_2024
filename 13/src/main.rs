@@ -22,6 +22,38 @@ fn find_lowest_win_combo(a_button:(i64,i64),b_button:(i64,i64),prize_pos:(i64,i6
     (false,0)
 }
 
+fn solve_lowest_win_combo(a_button_x:f64,a_button_y:f64,b_button_x:f64,b_button_y:f64,prize_x:f64,prize_y:f64) -> (bool,i64) {
+    //println!("AButton {:?} BButton {:?} Prize is {:?}",a_button,b_button,prize_pos);
+    // AlgebraEquations
+
+    // a_button_x * num_a + b_button_x * num_b = prize_x
+    // a_button_y * num_a + b_button_y * num_b = prize_y
+
+    // Multiply by button_y and button_x
+
+    // a_button_x*num_a*button_y+b_button_x*num_b*b_button_y=prize_x*b_button_y // Multiply by b_button_y
+    // a_button_y*num_a*button_x+b_button_y*num_b*b_button_x=prize_y*b_button_x // Multiply by b_button_x
+
+    // b_button_x*num_b*b_button_y == b_button_y*num_b*b_button_x  // soo...
+    // prize_x*b_button_y - a_button_x*num_a*b_button_y = prize_y*b_button_x - a_button_y*num_a*b_button_x
+
+    // num_a*(a_button_x*button_y-a_button_y*b_button-x)=prize_x*b_button_y -prize_y*b_button_x
+    // num_a=(prize_x*b_button_y -prize_y*b_button_x)/(a_button_x*button_y-a_button_y*b_button_x);
+
+    // num_b=(prize_y-a_button_y*num_a)/b_button_y
+
+    if (b_button_y * a_button_x - a_button_y * b_button_x)==0.0 {return (false,0);} // Unsolvable
+
+    let num_a=(prize_x*b_button_y -prize_y*b_button_x)/(a_button_x*b_button_y-a_button_y*b_button_x);
+    let num_b=(prize_y-a_button_y*num_a)/b_button_y;
+
+    if num_a.fract() == 0.0 && num_b.fract() == 0.0 { // Exact match only
+        return return (true,(num_a as i64) *3+(num_b as i64));
+    }
+
+    (false,0)
+}
+
 fn get_data(contents:&str,regex_formula:&str) -> Vec<(i64,i64)>
 {
     let mut found_data:Vec<(i64,i64)> = Vec::new();
@@ -49,8 +81,9 @@ fn main() {
     }
     println!("Pt1 - Total token count {total_token_count}");
     let mut total_token_count=0;
+    let increment:f64=10000000000000.0;//
     for i in 0..button_a_entries.len() {
-        let (can_win,token_count) = find_lowest_win_combo(button_a_entries[i],button_b_entries[i],(prize_entries[i].0+10000000000000,prize_entries[i].1+10000000000000));
+        let (can_win,token_count) = solve_lowest_win_combo(button_a_entries[i].0 as f64,button_a_entries[i].1 as f64,button_b_entries[i].0 as f64,button_b_entries[i].1 as f64,prize_entries[i].0 as f64+increment as f64,prize_entries[i].1 as f64+increment);
         if can_win {total_token_count+=token_count};
     }
     println!("Pt2 - Total token count {total_token_count}");
