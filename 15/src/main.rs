@@ -1,6 +1,8 @@
 use std::fs;
+use std::io;
+use std::io::prelude::*;
 
-#[derive(Copy,Clone)]
+#[derive(Copy,Clone,Debug)]
 enum GridEntryType {
     Empty,
     Block,
@@ -101,14 +103,33 @@ fn get_movable_blocks_in_direction(map: &Vec<Vec<GridEntryType>>,test_pos: (i64,
 
 fn try_movable_blocks_can_move_in_direction(map: &mut Vec<Vec<GridEntryType>>,movable_block_positions:&Vec<(i64,i64)>,direction: (i64, i64)) -> bool {
     // Test all can move
+
+    // Cache write positions
+    let mut write_data:Vec<(GridEntryType,(i64,i64))>=Vec::new();
+
     for block_pos in movable_block_positions {
         let move_to_pos=(block_pos.0+direction.0,block_pos.1+direction.1);
         if !test_bounds(map,move_to_pos) {return false;}
         match map[move_to_pos.1 as usize][move_to_pos.0 as usize] {
-            GridEntryType::Block=> {return false;}
+            GridEntryType::Block=> {return false;} // Cannot push this into a block
             _ => {}
         }
+        write_data.push((map[block_pos.1 as usize][block_pos.0 as usize],*block_pos));
     }
+    // Erase first
+    for write_src_pos in &write_data {
+        map[write_src_pos.1.1 as usize][write_src_pos.1.0 as usize] = GridEntryType::Empty; // erase old position
+    }
+    // Then write
+    for write_src_pos in &write_data {
+        let move_to_pos = (write_src_pos.1.0 + direction.0, write_src_pos.1.1 + direction.1);
+        println!("Moving {:?} from {},{} to {},{}",write_src_pos.0,write_src_pos.1.0,write_src_pos.1.1,move_to_pos.0,move_to_pos.1);
+
+        map[move_to_pos.1 as usize][move_to_pos.0 as usize]=write_src_pos.0; // Write new data
+
+    }
+
+    /*
     // Can move so process each
     for block_pos in movable_block_positions {
         let move_to_pos = (block_pos.0 + direction.0, block_pos.1 + direction.1);
@@ -118,6 +139,7 @@ fn try_movable_blocks_can_move_in_direction(map: &mut Vec<Vec<GridEntryType>>,mo
         map[block_pos.1 as usize][block_pos.0 as usize]=swap_dst;
        // std::mem::swap(swap_src,swap_dst);
     }
+     */
     true
 }
 
@@ -200,6 +222,18 @@ fn parse_directions(lines:&Vec<&str>) -> Vec<u8> {
     directions
 }
 
+fn pause() {
+    let mut stdin = io::stdin();
+    let mut stdout = io::stdout();
+
+    // We want the cursor to stay at the end of the line, so we print without a newline and flush manually.
+    write!(stdout, "Press any key to continue...").unwrap();
+    stdout.flush().unwrap();
+
+    // Read a single byte and discard
+    let _ = stdin.read(&mut [0u8]).unwrap();
+}
+
 fn main() {
     let content = fs::read_to_string("data/test_input").expect("Expected to read the file");
     let lines=content.split("\n");
@@ -234,6 +268,9 @@ fn main() {
     print_map(&map_wide,&agent_pos_wide);
     for direction in &agent_directions_sequence {
         process_direction_wide(&mut map_wide,&mut agent_pos_wide,*direction);
+
+        //print_map(&map_wide,&agent_pos_wide);
+        //pause();
     }
     print_map(&map_wide,&agent_pos_wide);
     println!("Pt2 - {}",calculate_coordinates(&map_wide));
