@@ -86,7 +86,7 @@ fn main() {
     let result = astar(&start_pos,
                        |test_pos| test_pos.successors(&grid),
                        |test_pos| test_pos.distance(&end_pos) / 3,
-                       |test_pos| *test_pos == end_pos);
+                       |test_pos| (test_pos.0,test_pos.1) == (end_pos.0,end_pos.1));
 
     match result {
         None => {println!("Unable to find path")},
