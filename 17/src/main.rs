@@ -34,9 +34,10 @@ fn process_step(machine_state:&mut MachineState,output_data:&mut Vec<i32>) -> bo
 }
 
 fn main() {
-    let content = fs::read_to_string("data/test_input").expect("Expected to read the file");
+    let content = fs::read_to_string("data/test_input_b").expect("Expected to read the file");
     let lines:Vec<&str>=content.split("\n").filter(|line|line.len()>0).collect();
     let mut machine_state:MachineState=MachineState{r_a:0,r_b:0,r_c:0,ptr:0,program:Vec::new()};
+
     for line in lines {
         if line.contains("Register A: ") { machine_state.r_a =line[12..].parse::<i32>().unwrap();}
         if line.contains("Register B: ") { machine_state.r_b =line[12..].parse::<i32>().unwrap();}
@@ -45,6 +46,7 @@ fn main() {
                                                            .map(|value_str| value_str.parse::<i32>().unwrap())
                                                            .collect();machine_state.program.extend(program_values);};
     }
+    let mut machine_state_pt2=machine_state.clone();
     println!("MachineState {:?}",machine_state);
     let mut halt=false;
     let mut output:Vec<i32>=Vec::new();
@@ -53,4 +55,22 @@ fn main() {
     }
     let output_string=output.iter().map(|entry|entry.to_string()).collect::<Vec<_>>().join(",");
     println!("Pt1 Done. Output {}",output_string);
+
+    let mut test_replacement_r_a=0;
+    loop {
+        let mut machine_state_clone=machine_state_pt2.clone();
+        machine_state_clone.r_a=test_replacement_r_a;
+        //println!("MachineState Loop {:?}",machine_state_clone);
+        let mut halt_pt2=false;
+        let mut output_pt2:Vec<i32>=Vec::new();
+        while !halt_pt2 {
+            halt_pt2=process_step(&mut machine_state_clone,&mut output_pt2);
+        }
+        if output_pt2==machine_state_clone.program {
+            println!("Pt Replacement Found: {}",test_replacement_r_a);
+            break;
+        }
+        //println!("No match {}",test_replacement_r_a);
+        test_replacement_r_a+=1;
+    }
 }
