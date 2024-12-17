@@ -50,7 +50,7 @@ fn main() {
                                                            .map(|value_str| value_str.parse::<i64>().unwrap())
                                                            .collect();machine_state.program.extend(program_values);};
     }
-    let mut machine_state_pt2=machine_state.clone();
+    let machine_state_pt2=machine_state.clone();
     println!("MachineState {:?}",machine_state);
     let mut halt=false;
     let mut output:Vec<i64>=Vec::new();
