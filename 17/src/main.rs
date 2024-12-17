@@ -1,6 +1,4 @@
 use std::fs;
-use std::process::exit;
-use colored::*;
 
 #[derive(Clone, Debug)]
 struct MachineState {
@@ -14,7 +12,7 @@ fn get_combo_operand(machine_state:&MachineState,combo_operand:i32) -> i32{
         4 => machine_state.r_a,
         5 => machine_state.r_b,
         6 => machine_state.r_c,
-        _ => {panic!("Unknown combo operand");0}
+        _ => {panic!("Unknown combo operand");}
     }
 }
 
@@ -39,7 +37,6 @@ fn main() {
     let content = fs::read_to_string("data/test_input").expect("Expected to read the file");
     let lines:Vec<&str>=content.split("\n").filter(|line|line.len()>0).collect();
     let mut machine_state:MachineState=MachineState{r_a:0,r_b:0,r_c:0,ptr:0,program:Vec::new()};
-    let mut program:Vec<i32>=Vec::new();
     for line in lines {
         if line.contains("Register A: ") { machine_state.r_a =line[12..].parse::<i32>().unwrap();}
         if line.contains("Register B: ") { machine_state.r_b =line[12..].parse::<i32>().unwrap();}
