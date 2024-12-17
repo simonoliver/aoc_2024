@@ -18,20 +18,20 @@ fn get_combo_operand(machine_state:&MachineState,combo_operand:i32) -> i32{
     }
 }
 
-fn process_step(machine_state:&mut MachineState) -> bool {
+fn process_step(machine_state:&mut MachineState,output_data:&mut Vec<i32>) -> bool {
     let (instruction,operand)=(machine_state.program[machine_state.ptr as usize],machine_state.program[(machine_state.ptr+1) as usize]);
+    machine_state.ptr+=2; // Progress instruction pointer for next run. Allow modification with jump
     match instruction {
         0 => {let output=(machine_state.r_a as f64)/((2 as i32).pow(get_combo_operand(&machine_state,operand) as u32) as f64);machine_state.r_a=output.floor() as i32} // adv
         1 => {let output= machine_state.r_b^operand;machine_state.r_b=output;} // bxl
         2 => {machine_state.r_b=get_combo_operand(machine_state,operand)%8;} // bst
         3 => {if machine_state.r_a!=0 {machine_state.ptr=operand;}} // jnz
         4 => {machine_state.r_b=machine_state.r_b ^ machine_state.r_c;} // bxc
-        5 => {let output=get_combo_operand(machine_state,operand)%8;println!("output {}",output);} // out
+        5 => {let output=get_combo_operand(machine_state,operand)%8;output_data.push(output);} // out
         6 => {let output=(machine_state.r_a as f64)/((2 as i32).pow(get_combo_operand(&machine_state,operand) as u32) as f64);machine_state.r_b=output.floor() as i32} // bdv
         7 => {let output=(machine_state.r_a as f64)/((2 as i32).pow(get_combo_operand(&machine_state,operand) as u32) as f64);machine_state.r_c=output.floor() as i32} // cdv
         _ => {panic!("Bad instruction")}
     }
-    if instruction!=3 { machine_state.ptr+=2;} // Progress instruction pointer
     machine_state.ptr<0 || machine_state.ptr>=machine_state.program.len() as i32 // Halt when exit bounds
 }
 
@@ -50,9 +50,10 @@ fn main() {
     }
     println!("MachineState {:?}",machine_state);
     let mut halt=false;
+    let mut output:Vec<i32>=Vec::new();
     while !halt {
-        halt=process_step(&mut machine_state);
-        //println!("Pos {}",machine_state.)
+        halt=process_step(&mut machine_state,&mut output);
     }
-    println!("Done");
+    let output_string=output.iter().map(|entry|entry.to_string()).collect::<Vec<_>>().join(",");
+    println!("Pt1 Done. Output {}",output_string);
 }
