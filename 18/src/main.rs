@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 use std::fs;
 use grid::*; //https://docs.rs/grid/latest/grid/
-use pathfinding::prelude::{astar, astar_bag}; // https://docs.rs/pathfinding/latest/pathfinding/directed/astar/fn.astar.html
+use pathfinding::prelude::{astar}; // https://docs.rs/pathfinding/latest/pathfinding/directed/astar/fn.astar.html
 use colored::*;
 
 #[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd)]
@@ -128,7 +128,7 @@ fn solve(input_path:&str,grid_size:(usize,usize),advance_count:i32) {
                 let block_pos=drop_sequence[(advance_count_inc-1) as usize];
                 println!("pt2 - blocked at index {} - Pos is {},{}",advance_count_inc,block_pos.0,block_pos.1);break;
             },
-            Some(path_result) => {
+            Some(_) => {
                 //println!("Loop count pass {advance_count_inc}");
                 //print_map(&grid,&path_result.0,&drop_pos_map,advance_count);
                 //println!("Pt1 - Step count {}",path_result.0.len()-1); // Ignore first location
