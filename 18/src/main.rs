@@ -5,7 +5,7 @@ use pathfinding::prelude::{astar, astar_bag}; // https://docs.rs/pathfinding/lat
 use colored::*;
 
 #[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd)]
-struct GridPos(i32,i32,u8,u32); // x,y,rotation,time_step
+struct GridPos(i32,i32,u8); // x,y,rotation
 const DIRECTIONS:[(i32,i32);4]=[(1,0),(0,1),(-1,0),(0,-1)];
 const DIRECTION_SYMBOLS:[char;4]=['→','↓','←','↑'];
 
@@ -30,7 +30,7 @@ impl GridPos {
                 // Blocked if there is an entry and its blocked
                 let blocked=drop_pos_map.contains_key(&test_pos) && drop_pos_map[&test_pos]<drop_pos_advance;
                 if !blocked {
-                    valid_successors.push((GridPos(test_pos.0,test_pos.1,direction_index as u8,self.3+1),{1})); // Increment step
+                    valid_successors.push((GridPos(test_pos.0,test_pos.1,direction_index as u8),{1})); // Increment step
                 }
                 /*
                 match grid.get(test_pos.1,test_pos.0) {
@@ -75,29 +75,10 @@ fn print_map(map:&Grid<GridEntry>, path:&Vec<GridPos>,drop_pos_map:&HashMap<(i32
         println!("{}",row_string);
     }
 }
-/*
-fn pos_from_index(index:i32,grid_width:i32) -> GridPos {
-    GridPos(index%grid_width, (index as f64/grid_width as f64).floor() as i32, 0)
-}
-*/
-/*
-fn parse_map(content:&str,line_length:usize) -> (Grid<GridEntry>,GridPos,GridPos) {
-    let (mut start_pos,mut end_pos)=(GridPos(0,0,0),GridPos(0,0,0));
-    let entries:Vec<GridEntry>=content.chars().fold(Vec::new(),  |mut acc,entry_char| {match entry_char {
-        '#' => acc.push(GridEntry::Block),
-        'S' => {start_pos=pos_from_index(acc.len() as i32,line_length as i32);acc.push(GridEntry::StartPosition)},
-        'E' => {end_pos=pos_from_index(acc.len() as i32,line_length as i32);acc.push(GridEntry::EndPosition)},
-        '.' => acc.push(GridEntry::Empty),
-        _ => {}
-    };acc});
-    (Grid::from_vec(entries,line_length),start_pos,end_pos)
-}
-*/
-
 
 fn main() {
-    //solve("data/input",(71,71),1024);
-    solve("data/test_input",(7,7),12);
+    solve("data/input",(71,71),1024);
+    //solve("data/test_input",(7,7),12);
 }
 
 fn solve(input_path:&str,grid_size:(usize,usize),advance_count:i32) {
@@ -116,8 +97,8 @@ fn solve(input_path:&str,grid_size:(usize,usize),advance_count:i32) {
     }
     let grid:Grid<GridEntry>=Grid::new(grid_size.1,grid_size.0);
 
-    let start_pos=GridPos(0,0,0,0);
-    let end_pos=GridPos((grid_size.1-1) as i32,(grid_size.1-1) as i32,0,0);
+    let start_pos=GridPos(0,0,0);
+    let end_pos=GridPos((grid_size.1-1) as i32,(grid_size.1-1) as i32,0);
     let pos_list:Vec<GridPos>=Vec::new();
     print_map(&grid,&pos_list,&drop_pos_map,advance_count);
 
@@ -133,4 +114,28 @@ fn solve(input_path:&str,grid_size:(usize,usize),advance_count:i32) {
             println!("Pt1 - Step count {}",path_result.0.len()-1); // Ignore first location
         }
     }
+
+    // Pt2
+    let mut advance_count_inc=advance_count;
+    loop {
+        let result = astar(&start_pos,
+                           |test_pos| test_pos.successors(&grid,&drop_pos_map,advance_count_inc),
+                           |test_pos| test_pos.distance(&end_pos) / 3,
+                           |test_pos| (test_pos.0,test_pos.1) == (end_pos.0,end_pos.1));
+
+        match result {
+            None => {
+                let block_pos=drop_sequence[(advance_count_inc-1) as usize];
+                println!("pt2 - blocked at index {} - Pos is {},{}",advance_count_inc,block_pos.0,block_pos.1);break;
+            },
+            Some(path_result) => {
+                //println!("Loop count pass {advance_count_inc}");
+                //print_map(&grid,&path_result.0,&drop_pos_map,advance_count);
+                //println!("Pt1 - Step count {}",path_result.0.len()-1); // Ignore first location
+            }
+        }
+        advance_count_inc+=1;
+    }
+
+
 }
