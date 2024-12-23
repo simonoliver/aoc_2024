@@ -2,24 +2,15 @@ use std::collections::HashMap;
 use std::fs;
 
 fn main() {
-    //solve("data/input");
-    solve("data/test_input");
+    solve("data/input");
+    //solve("data/test_input");
 }
 
 fn triangle_starts_with_char(triangle:&(&str,&str,&str),char_check:char) -> bool {
     triangle.0.chars().next().unwrap()==char_check || triangle.1.chars().next().unwrap()==char_check || triangle.2.chars().next().unwrap()==char_check
 }
-/*
-fn check_or_insert_triangle_set(triangle_sets:&mut Vec<(&str,&str,&str)>,node_ids:(&str,&str,&str)) {
-    let mut sorted_nodes:Vec<&str>=vec!{node_ids.0,node_ids.1,node_ids.2};
-    sorted_nodes.sort();
-    let triangle_tuple=(sorted_nodes[0],sorted_nodes[1],sorted_nodes[2]);
-    if !triangle_sets.contains(&triangle_tuple)
-    {
-        triangle_sets.push(triangle_tuple);
-    }
-}
- */
+
+
 
 fn solve(data_path:&str)
 {
@@ -36,7 +27,7 @@ fn solve(data_path:&str)
         connection_sets.entry(node_id_1).and_modify(|value|value.push(node_id_0)).or_insert(vec!{node_id_0}); // Add entry
     }
     // Check connections
-    let mut triangle_sets:Vec<(&str,&str,&str)>=Vec::new(); // Vector of array of 3 items, for comparison]
+    let mut triangle_sets:HashMap<(&str,&str,&str),bool>=HashMap::new(); // Vector of array of 3 items, for comparison]
     for node_connection_pair in &connection_sets {
         for &second_node_connection_id in node_connection_pair.1 { // Cycle through every node connected to "root" node
             let second_node_connection_set=connection_sets.get(&second_node_connection_id).unwrap();
@@ -47,16 +38,37 @@ fn solve(data_path:&str)
                     let mut sorted_nodes:Vec<&str>=vec!{*node_connection_pair.0,second_node_connection_id,third_node_connection_id};
                     sorted_nodes.sort();
                     let triangle_tuple=(sorted_nodes[0],sorted_nodes[1],sorted_nodes[2]);
-                    if !triangle_sets.contains(&triangle_tuple)
+                    if !triangle_sets.contains_key(&triangle_tuple)
                     {
-                        triangle_sets.push(triangle_tuple);
+                        triangle_sets.entry(triangle_tuple).or_insert(true);
                     }
                 }
             }
         }
     }
+/*
+    let mut fully_connection_sets:Vec<(Vec<&str>)>=Vec::new();
+    for node_connection_pair in &connection_sets {
+        // The count will be the number of items in this set that are all connected to each other
+        // eg in A,B,C,D for this to work we must have A-B,A-C,A-D, B-C,B-D,
+        let mut all_node_ids=node_connection_pair.1.clone();
+        all_node_ids.push(node_connection_pair.0); // Add original
+        all_node_ids.sort(); // Sort alphabetically
+        // We kinda wanna check every possible combo,
+        let mut fully_connected_node_ids:Vec<&str>=Vec::new();
+        for test_node_id in &all_node_ids { // For each node id on the set connected to A (A,B,C,D)
+            for test_connected_node_id in &all_node_ids { // Check against each connected node (A,B,C,D).
+                if test_node_id!=test_connected_node_id { // must be different!
+                    if connection_pairs.contains_key(&(*test_node_id,*test_connected_node_id)) {  // If is also B is connected to C.
+                        fully_connected_node_ids.push()
+                    }
+                }
+            }
+        }
+    }
+    */
     println!("triangle sets found {}",triangle_sets.len());
-    let filtered_sets:Vec<&(&str,&str,&str)>=triangle_sets.iter().filter(|triangle_set|triangle_starts_with_char(triangle_set,'t')).collect();
-    println!("filtered_sets {}",filtered_sets.len());
+    let filtered_sets:Vec<&(&str,&str,&str)>=triangle_sets.iter().filter(|triangle_set|triangle_starts_with_char(triangle_set.0,'t')).map(|pair|pair.0).collect();
+    println!("Pt1 - filtered_sets {}",filtered_sets.len());
 }
 
