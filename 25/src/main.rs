@@ -2,8 +2,8 @@ use std::fs;
 use itertools::Itertools;
 
 fn main() {
-    //solve("data/input");
-    solve("data/test_input");
+    solve("data/input");
+    //solve("data/test_input");
 }
 
 //#derive![Debug]
@@ -36,6 +36,18 @@ fn solve(data_path:&str)
             }
         }
         println!("Section index {} line data {} is_lock {}",section_index,column_count.iter().join(","),is_lock);
+        key_data.push(KeyData(is_lock,column_count));
     }
+    let mut fit_count=0;
+    for key in key_data.iter().filter(|key_data|key_data.0) {
+        for lock in key_data.iter().filter(|key_data|!key_data.0) {
+            let mut all_pass=true;
+            for (column_index,line_value) in key.1.iter().enumerate() {
+                if line_value+lock.1[column_index]>5 {all_pass=false;}
+            }
+            if all_pass {fit_count+=1;}
+        }
+    }
+    println!("Pt1 - Fit count {fit_count}");
 
 }
