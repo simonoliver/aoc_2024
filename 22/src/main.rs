@@ -40,7 +40,6 @@ fn solve(data_path:&str)
     println!("Pt1 - Sum is {sum}");
 
     // Pt2
-
     let mut add_banana_hashmap:HashMap<(i32,i32,i32,i32),i64>=HashMap::new();
     for input_number in &input_numbers {
         let mut output_secret_number = *input_number;
@@ -61,29 +60,8 @@ fn solve(data_path:&str)
                 }
             }
         }
-        //println!("Input {input_number} output {processed_number}");
     }
     let max_bananas_key=add_banana_hashmap.iter().max_by_key(|entry|entry.1).unwrap();
     let max_bananas=add_banana_hashmap.values().max().unwrap();
-    println!("Pt2 - largest banana count is {} key {:?}",max_bananas,max_bananas_key);
-/*
-    let mut largest_banana_count:i64=0;
-    for diff_0 in -9..9 {
-        for diff_1 in -9..9 {
-            for diff_2 in -9..9 {
-                for diff_3 in -9..9 {
-                    let diff_test=vec!{diff_0,diff_1,diff_2,diff_3};
-                    println!("Testing {:?}",diff_test);
-                    let mut banana_count:i64=0;
-
-                    if banana_count>largest_banana_count {
-                        largest_banana_count=banana_count;
-                        println!("New largest banana count for {:?} is {}",diff_test,largest_banana_count);
-                    }
-                }
-            }
-        }
-    }
- */
-    //println!("Pt2 - largest banana count is {}",largest_banana_count);
+    println!("Pt2 - largest banana count is {} {:?}",max_bananas,max_bananas_key);
 }
