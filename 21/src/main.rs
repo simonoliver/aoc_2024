@@ -21,27 +21,20 @@ impl Keypad {
 
             // In order to address issues with spaces, we'll check if dest row or target row have a space in
             let space_pos=self.entry_position_table.get(&' ').unwrap();
-            let (current_row_has_space,target_row_has_space)=(current_position.0==space_pos.0,target_pos.0==space_pos.0);
-            // If the current row has a space, go vertical first
-            let use_vert_first=current_row_has_space; // Go vert first if current row has a space or vert row has space in same column as current pos || (target_row_has_space && current_position.1==space_pos.1))
-            if use_vert_first {
-                let direction_count=vec!{cmp::max(-1* diff.0 as i32,0),cmp::max(diff.0,0) as i32,cmp::max(-1* diff.1 as i32,0),cmp::max(diff.1,0) as i32,}; //U/D/L/R
-                //println!("Move from {:?} to {:?} diff is {:?} direction count {:?}",current_position,target_pos,diff,direction_count);
-                for (index,count) in direction_count.iter().enumerate() {
-                    for i in 0..*count {
-                        sequence.push(DIRECTION_CHARS_VERT_FIRST[index]); // Add direction
-                    }
-                }
-            } else {
-                let direction_count=vec!{cmp::max(-1* diff.1 as i32,0),cmp::max(diff.1,0) as i32,cmp::max(-1* diff.0 as i32,0),cmp::max(diff.0,0) as i32}; //L/R/U/D
-                //println!("Move from {:?} to {:?} diff is {:?} direction count {:?}",current_position,target_pos,diff,direction_count);
-                for (index,count) in direction_count.iter().enumerate() {
-                    for i in 0..*count {
-                        sequence.push(DIRECTION_CHARS[index]); // Add direction
-                    }
-                }
-            }
+            let mut up_down:Vec<char>=vec!{if (diff.0 > 0) {'v'} else {'^'};diff.0.abs() as usize};
+            let mut left_right:Vec<char>=vec!{if (diff.1 > 0) {'>'} else {'<'};diff.1.abs() as usize};
 
+            if diff.1 > 0 && (target_pos.0,current_position.1)!=*space_pos {
+                sequence.append(&mut up_down);
+                sequence.append(&mut left_right);
+            } else if (current_position.0,target_pos.1)!=*space_pos {
+                sequence.append(&mut left_right);
+                sequence.append(&mut up_down);
+            } else {
+                sequence.append(&mut up_down);
+                sequence.append(&mut left_right);
+            }
+            
             sequence.push('A'); // Add "Press" button
             current_position=*target_pos; // Now at target pos
         }
@@ -63,8 +56,8 @@ impl Keypad {
 }
 
 fn main() {
-    //solve("data/input");
-    solve("data/test_input");
+    solve("data/input");
+    //solve("data/test_input");
 }
 
 fn solve(data_path:&str)
